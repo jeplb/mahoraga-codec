@@ -16,9 +16,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 
-ROOT = Path(__file__).resolve().parent.parent
-RESULTS_DIR = ROOT / "outputs" / "bench3"
-OUT_PDF = ROOT / "paper" / "figures" / "fig_dt4dds_gimpel_style.pdf"
+SCRIPT_DIR = Path(__file__).resolve().parent
+RESULTS_DIR = SCRIPT_DIR.parent / "data" / "bench3"
+OUT_PDF = SCRIPT_DIR / "dt4dds_gimpel_style.pdf"
 
 # Gimpel 2026 published codec peaks, read directly from the paper text
 # (Nature Communications, s41467-026-70548-3). All peaks are measured at

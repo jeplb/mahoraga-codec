@@ -23,3 +23,7 @@ __pycache__/
 *.log
 *.out
 *.synctex.gz
+
+# generated plot outputs (reproducible from scripts)
+bench*/*.pdf
+bench*/*.svg

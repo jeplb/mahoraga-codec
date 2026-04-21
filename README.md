@@ -8,7 +8,10 @@ A DNA data-storage codec in pure python. Short strands (126 nt by default), soft
 codec/
   mahoraga_py/   the codec (10 modules, ~2,700 lines)
   tests/         pytest suite — roundtrips + RS/GF unit tests
-bench3/          DT4DDS plotting script (uses data/bench3/)
+bench1/          plot scripts for codec comparison (density_vs_r, codec_comparison)
+bench2/          plot script for matched-parity comparison
+bench3/          plot scripts for the DT4DDS pipeline (pareto, gimpel_style)
+bench4/          plot script for longevity projection
 data/            benchmark JSON, organised to match the paper
   bench1/          codec comparison (supp. table s1)
   bench2/          matched-parity comparison (supp. table s2, fig 1 c/d)
@@ -19,6 +22,8 @@ paper/           stable1..stable4 aggregated tables
 ```
 
 Filenames encode the experimental cell: `<codec>-bench<n>-<channel>-<params>.json`. The per-trial JSONs carry seed, git SHA, codec/channel parameters, and timings.
+
+Each `benchN/` directory co-locates its plot script(s) next to its input data. Running a script writes its PDF/SVG in the same folder. Drop the PDF into LaTeX and move on.
 
 ## Install
 
@@ -70,9 +75,21 @@ cd codec && pytest -q
 
 ## Reproducing the paper
 
-Every cell in the paper has a corresponding JSON under `data/`. The aggregated `paper/stable*.tsv` files are what the paper's supplementary tables show; they were produced from the JSONs by grouping on `(codec, channel, r)` and counting `n_success / n_trials`.
+Every cell in the paper has a corresponding JSON under `data/`. The aggregated `paper/stable*.tsv` files are what the supplementary tables show; they were produced from the JSONs by grouping on `(codec, channel, r)` and counting `n_success / n_trials`.
 
-For bench3 (DT4DDS), `bench3/plot_bench3_gimpel_style.py` regenerates fig 3 from the JSON files in `data/bench3/`. The channel simulation itself needs the DT4DDS package — if you want to re-run it rather than just re-plot, use the runners from your DT4DDS install.
+Replot any figure from its data:
+
+```
+pip install numpy matplotlib  # plot-only dependencies
+python3 bench1/plot_density_vs_r.py       # density vs. redundancy (hifi)
+python3 bench1/plot_codec_comparison.py   # full codec comparison panel
+python3 bench2/plot_matched_parity.py     # matched-outer-parity bars
+python3 bench3/plot_dt4dds_pareto.py      # DT4DDS pareto, hifi + lofi
+python3 bench3/plot_bench3_gimpel_style.py  # gimpel 2026-style panels
+python3 bench4/plot_longevity.py          # density vs years at 25°C
+```
+
+Each script reads from `data/benchN/` or `paper/stable*.tsv` and writes its PDF + SVG next to itself. Regenerating the figures should take a couple of seconds. If you want to re-run the DT4DDS channel itself (rather than just replot the existing JSONs) you need the DT4DDS package; that pipeline is not in this repo.
 
 The `data/bench2/python_*.json` files record per-trial results from the mahoraga-py codec at 2 KB (60 trials) and 15,360 B (20 trials): `ok_py` / `md5_py` are the python port's outcome, `ok_rs` / `md5_rs` columns record a reference decoder's outcome on the same channel output for cross-validation, `byte_mismatch` flags any per-trial divergence. Pilot: 60/60 byte-identical. Full size: 20/20 byte-identical.
 
