@@ -83,14 +83,8 @@ The `data/bench2/python_*.json` files record per-trial results from the mahoraga
 - The pure-python codec prioritises readability over speed. A file larger than ~20 KB at low physical redundancy takes hours to decode; it's fine for audit, teaching, and reproducing the paper at the published sizes, but it is not a production codec.
 - Some `data/bench3/` cells have `sd=1` entries which are a sanity grid, not a paper claim. The paper quotes sd ∈ {15, 30}.
 
-## Citation
-
-If you use this code:
-
-> Banal, J. L. (2026). mahoraga: a short-strand DNA storage codec. [TBD — paper ref].
-
 ## License
 
 PolyForm Noncommercial 1.0.0. See `LICENSE`.
 
-Noncommercial use — research, teaching, peer review, reproducing paper results — is permitted. Commercial use (including internal use by a for-profit entity for its own products or services) requires a separate license from the copyright holder, James L. Banal.
+Noncommercial use, namely research, teaching, peer review, reproducing paper results, is permitted. Commercial use (including internal use by a for-profit entity for its own products or services) requires a separate license from the copyright holder, James L. Banal.
