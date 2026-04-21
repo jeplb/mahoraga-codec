@@ -1,0 +1,61 @@
+codec,benchmark,channel,r,n_trials,n_success,success_rate,median_density_eb_per_g,median_decode_time_s,median_preproc_time_s,median_n_surviving,median_inner_pass_rate,input_size_bytes,preprocessing,parity_rate,git_shas,hmm_rs_versions,idsim_versions,channel_coverage_sigma
+dna_aeon,1,hifi,0.02,30,0,0.0,4126.486,0.0,0.044,32,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,0.05,30,0,0.0,1650.594,0.0,0.094,76,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,0.1,30,0,0.0,825.297,0.0,0.195,148,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,0.2,30,0,0.0,412.649,0.0,0.369,279,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,0.3,30,0,0.0,275.099,0.0,0.596,395,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,0.5,30,0,0.0,165.059,0.0,0.966,597,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,1.0,30,0,0.0,81.786,0.0,1.728,954,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,2.0,30,30,1.0,41.265,78.532,2.833,1298,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,5.0,30,30,1.0,16.506,88.076,3.474,1517,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,hifi,10.0,30,30,1.0,8.179,87.543,3.374,1539,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,0.02,30,0,0.0,4126.486,0.0,0.044,32,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,0.05,30,0,0.0,1650.594,0.0,0.097,76,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,0.1,30,0,0.0,825.297,0.0,0.203,148,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,0.2,30,0,0.0,412.649,0.0,0.366,279,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,0.3,30,0,0.0,275.099,0.0,0.615,395,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,0.5,30,0,0.0,165.059,0.0,1.046,597,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,1.0,30,0,0.0,82.53,0.0,1.941,954,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,2.0,30,29,0.9667,40.893,358.393,2.748,1298,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,5.0,30,30,1.0,16.506,391.479,2.744,1517,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+dna_aeon,1,lofi,10.0,30,30,1.0,8.253,410.12,2.381,1539,,15360,cdhit_dereplicate (id=0.85),,unknown,unknown,0.1.0,0.3
+mahoraga,1,hifi,0.02,30,30,1.0,153.249,574.333,0.0,720,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,0.05,30,30,1.0,150.976,350.273,0.0,712,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,0.1,30,30,1.0,147.296,222.692,0.0,709,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,0.2,30,30,1.0,140.289,172.539,0.0,710,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,0.3,30,30,1.0,133.725,170.183,0.0,707,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,0.5,30,30,1.0,121.784,141.04,0.0,710,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,1.0,30,30,1.0,97.782,138.884,0.0,704,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,2.0,30,30,1.0,66.879,148.561,0.0,703,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,5.0,30,30,1.0,30.716,143.338,0.0,713,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,hifi,10.0,30,30,1.0,15.465,142.499,0.0,717,0.996,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,0.02,30,30,1.0,116.097,567.051,0.0,951,0.7835,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,0.05,30,30,1.0,114.379,484.689,0.0,937,0.7785,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,0.1,30,30,1.0,111.588,274.463,0.0,944,0.782,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,0.2,30,30,1.0,106.272,252.972,0.0,940,0.7805,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,0.3,30,30,1.0,101.292,246.055,0.0,934,0.7835,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,0.5,30,30,1.0,92.25,235.582,0.0,935,0.778,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,1.0,30,30,1.0,74.121,233.605,0.0,929,0.7755,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,2.0,30,30,1.0,50.679,245.394,0.0,925,0.778,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,5.0,30,30,1.0,23.271,236.857,0.0,939,0.7785,15360,,,unknown,0.1.0,0.1.0,0.3
+mahoraga,1,lofi,10.0,30,30,1.0,11.721,248.219,0.0,946,0.7775,15360,,,unknown,0.1.0,0.1.0,0.3
+mgcplus,1,hifi,0.02,30,0,0.0,2641.147,0.0,1.623,42,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,0.05,30,0,0.0,1056.459,0.0,3.136,108,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,0.1,30,0,0.0,528.229,0.0,5.054,208,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,0.2,30,0,0.0,264.115,0.0,12.014,395,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,0.3,30,0,0.0,176.076,0.0,17.575,559,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,0.5,30,0,0.0,105.646,0.0,27.622,843,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,1.0,30,30,1.0,52.823,66.744,55.681,1340,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,2.0,30,30,1.0,26.411,67.767,90.189,1830,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,5.0,30,30,1.0,10.565,66.624,113.501,2136,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,hifi,10.0,30,30,1.0,5.282,70.461,100.609,2167,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,0.02,30,0,0.0,2641.147,0.0,1.663,42,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,0.05,30,0,0.0,1056.459,0.0,3.668,108,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,0.1,30,0,0.0,528.229,0.0,6.55,208,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,0.2,30,0,0.0,264.115,0.0,11.677,395,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,0.3,30,0,0.0,176.076,0.0,16.194,559,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,0.5,30,0,0.0,105.646,0.0,30.206,843,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,1.0,30,30,1.0,52.823,62.51,58.308,1340,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,2.0,30,30,1.0,26.411,68.834,89.998,1830,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,5.0,30,30,1.0,10.565,54.312,115.169,2136,,15360,,,unknown,unknown,0.1.0,0.3
+mgcplus,1,lofi,10.0,30,30,1.0,5.282,46.498,98.578,2167,,15360,,,unknown,unknown,0.1.0,0.3

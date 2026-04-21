@@ -1,0 +1,18 @@
+[project]
+name = "mahoraga-py"
+version = "0.1.0"
+description = "mahoraga DNA storage codec, python implementation"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mahoraga_py"]

@@ -1,0 +1,25 @@
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.eggs/
+*.egg-info/
+.pytest_cache/
+
+# editor / os
+.DS_Store
+.idea/
+.vscode/
+
+# scratch
+*.tmp
+*.swp
+
+# latex build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz

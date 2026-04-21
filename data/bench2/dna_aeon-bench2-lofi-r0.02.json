@@ -1,0 +1,9 @@
+{
+  "codec": "dna_aeon",
+  "channel": "lofi",
+  "r": 0.02,
+  "benchmark": 2,
+  "n_trials": 0,
+  "results": [],
+  "fatal_error": "encoder_timeout: raptor encoder stuck at 64%% overhead for 6+ hours"
+}

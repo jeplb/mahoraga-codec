@@ -1,0 +1,50 @@
+{
+  "benchmark": 3,
+  "codec": "mahoraga",
+  "scenario": "bestcase",
+  "channel": "hifi",
+  "physical_redundancy": 0.3,
+  "sequencing_depth": 30.0,
+  "margin": 1.08,
+  "n_seqs": 1171,
+  "seq_len": 300,
+  "density_eb_per_g": 167.92084258468546,
+  "input_size": 19456,
+  "n_trials": 3,
+  "n_success": 0,
+  "results": [
+    {
+      "seed": 0,
+      "success": false,
+      "failure_reason": "no_reads_after_merge",
+      "n_reads": 0,
+      "decode_time_s": 0.0,
+      "workflow_time_s": 5.110798388006515,
+      "error": null,
+      "trial": 0,
+      "density_eb_per_g": 167.92084258468546
+    },
+    {
+      "seed": 1000,
+      "success": false,
+      "failure_reason": "no_reads_after_merge",
+      "n_reads": 0,
+      "decode_time_s": 0.0,
+      "workflow_time_s": 2.249115635000635,
+      "error": null,
+      "trial": 1,
+      "density_eb_per_g": 167.92084258468546
+    },
+    {
+      "seed": 2000,
+      "success": false,
+      "failure_reason": "no_reads_after_merge",
+      "n_reads": 0,
+      "decode_time_s": 0.0,
+      "workflow_time_s": 2.2274297640105942,
+      "error": null,
+      "trial": 2,
+      "density_eb_per_g": 167.92084258468546
+    }
+  ]
+}
