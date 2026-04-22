@@ -3,10 +3,11 @@
 # mahoraga + prior codecs (dna-aeon, mgc+) at bench1 native operating points.
 # distinct line styles + marker shapes so the plot reads in black-and-white.
 #
-# data:   ../paper/stable1_bench1_full.tsv (aggregated from data/bench1/*.json)
+# data:   ../data/bench1/*.json (per-cell trial records)
 # writes: density_vs_r.{pdf,svg} next to this script
 
-import csv
+import json
+import statistics
 from collections import defaultdict
 from pathlib import Path
 
@@ -14,7 +15,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-SRC = SCRIPT_DIR.parent / "paper" / "stable1_bench1_full.tsv"
+DATA_DIR = SCRIPT_DIR.parent / "data" / "bench1"
 OUT_PDF = SCRIPT_DIR / "density_vs_r.pdf"
 OUT_SVG = SCRIPT_DIR / "density_vs_r.svg"
 
@@ -45,21 +46,24 @@ CHANNEL = "hifi"
 
 
 def load_points():
-    """return {codec: [(r, density)]} for cells at 30/30 on the hifi channel."""
+    """return {codec: [(r, median_density)]} for cells at 30/30 on the hifi channel.
+
+    aggregates per-trial density_eb_per_g from data/bench1/*.json.
+    """
     by_codec = defaultdict(list)
-    with open(SRC) as f:
-        for row in csv.DictReader(f, delimiter="\t"):
-            if row["channel"] != CHANNEL:
-                continue
-            if not row["n_success"] or not row["n_trials"]:
-                continue
-            if int(row["n_success"]) != int(row["n_trials"]):
-                continue
-            if not row["mediandensityebperg"]:
-                continue
-            by_codec[row["codec"]].append(
-                (float(row["r"]), float(row["mediandensityebperg"]))
-            )
+    for path in sorted(DATA_DIR.glob("*bench1*.json")):
+        with open(path) as f:
+            d = json.load(f)
+        if d.get("channel") != CHANNEL:
+            continue
+        results = d.get("results", [])
+        successes = [t for t in results if t.get("success")]
+        if not results or len(successes) != len(results):
+            continue
+        densities = [t["density_eb_per_g"] for t in successes if t.get("density_eb_per_g") is not None]
+        if not densities:
+            continue
+        by_codec[d["codec"]].append((float(d["r"]), statistics.median(densities)))
     for k in by_codec:
         by_codec[k].sort()
     return by_codec

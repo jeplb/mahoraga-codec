@@ -18,7 +18,6 @@ data/            benchmark JSON, organised to match the paper
   bench3/          DT4DDS pipeline replication (supp. table s3, fig 3)
   bench4/          longevity (supp. table s4, fig 4)
   bench5/          strand length sweep (supp. fig)
-paper/           stable1..stable4 aggregated tables
 ```
 
 Filenames encode the experimental cell: `<codec>-bench<n>-<channel>-<params>.json`. The per-trial JSONs carry seed, git SHA, codec/channel parameters, and timings.
@@ -75,7 +74,7 @@ cd codec && pytest -q
 
 ## Reproducing the paper
 
-Every cell in the paper has a corresponding JSON under `data/`. The aggregated `paper/stable*.tsv` files are what the supplementary tables show; they were produced from the JSONs by grouping on `(codec, channel, r)` and counting `n_success / n_trials`.
+Every cell in the paper has a corresponding JSON under `data/`. The supplementary tables are produced on the fly from the JSONs by grouping on `(codec, channel, r)` and counting `n_success / n_trials` — no intermediate aggregate files are checked in.
 
 Replot any figure from its data:
 
@@ -89,7 +88,7 @@ python3 bench3/plot_bench3_gimpel_style.py  # gimpel 2026-style panels
 python3 bench4/plot_longevity.py          # density vs years at 25°C
 ```
 
-Each script reads from `data/benchN/` or `paper/stable*.tsv` and writes its PDF + SVG next to itself. Regenerating the figures should take a couple of seconds. If you want to re-run the DT4DDS channel itself (rather than just replot the existing JSONs) you need the DT4DDS package; that pipeline is not in this repo.
+Each script reads from `data/benchN/` and writes its PDF + SVG next to itself. Regenerating the figures should take a couple of seconds. If you want to re-run the DT4DDS channel itself (rather than just replot the existing JSONs) you need the DT4DDS package; that pipeline is not in this repo.
 
 The `data/bench2/python_*.json` files record per-trial results from the mahoraga-py codec at 2 KB (60 trials) and 15,360 B (20 trials): `ok_py` / `md5_py` are the python port's outcome, `ok_rs` / `md5_rs` columns record a reference decoder's outcome on the same channel output for cross-validation, `byte_mismatch` flags any per-trial divergence. Pilot: 60/60 byte-identical. Full size: 20/20 byte-identical.
 
