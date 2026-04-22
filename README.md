@@ -2,6 +2,12 @@
 
 A DNA data-storage codec in pure python. Short strands (126 nt by default), soft-decision inner decode (LDPC + OSD with CRC gating), outer Reed-Solomon over GF(2^16) for the file layer, optional turbo feedback on the noisy channel. Everything here is readable, everything is reproducible, and every number in the accompanying paper ties back to a JSON file under `data/`.
 
+## Performance note
+
+This is a reference implementation written for clarity rather than speed. Expect seconds to minutes per oligo for HMM forward-backward and OSD decoding on a single CPU core.  The benchmarks in `data/` were produced with an optimised implementation. The Python code here reproduces the same output on the same inputs but runs approximately slower per decode.
+
+Performance-sensitive applications should expect the decoder to be re-implemented in a compiled language. The HMM forward-backward, OSD enumeration, and GF(2^16) arithmetic all have straightforward vectorised and parallelised implementations. The algorithms and data structures in this codebase transfer directly.
+
 ## Layout
 
 ```
