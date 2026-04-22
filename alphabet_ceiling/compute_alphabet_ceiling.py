@@ -1,22 +1,26 @@
 #!/usr/bin/env python3
-"""Shannon-fraction statistics for the Mahoraga paper.
+"""Alphabet-ceiling fraction statistics for the Mahoraga paper.
 
 reads the matched-parity benchmark JSONs under data/bench2/ and computes,
-for every (channel, r) cell:
+for every (channel, r) cell, what fraction of the quaternary alphabet
+ceiling each codec realises. the alphabet ceiling is 2 bits per base pair;
+after accounting for stochastic dropout, the maximum density achievable at
+physical redundancy r is
 
-    C           = per-base capacity upper bound of the IDS channel
-                  = 2 * (1 - h(p_sub)) - 2 * (p_ins + p_del)
-    rho_shannon = C * (1 - exp(-r)) / r * EB_PER_G_PER_BIT_PER_BASE
-    fraction    = realized_density / rho_shannon   (per codec, 30/30 cells only)
+    rho_max  = 2 * (1 - exp(-r)) / r * EB_PER_G_PER_BIT_PER_BASE
+    fraction = realized_density / rho_max   (30/30 cells only)
+
+the ceiling is channel-independent: it depends only on alphabet size and
+the Poisson survival fraction. channel-specific capacity bounds (with
+per-base substitution and indel rates) are strictly tighter and would give
+fractions closer to 100%. this cross-channel formulation is the only
+universal closed-form bound, which is why the paper uses it.
 
 output:
-    shannon_fraction.csv   (written next to this script)
-
-channel error rates are pulled from the idsim source (channel.rs:38-48)
-and printed at startup for reproducibility.
+    alphabet_ceiling.csv   (written next to this script)
 
 run:
-    python3 shannon_fraction/compute_shannon_fraction.py
+    python3 alphabet_ceiling/compute_alphabet_ceiling.py
 """
 
 from __future__ import annotations
@@ -26,7 +30,7 @@ import json
 import math
 import warnings
 from pathlib import Path
-from typing import Dict, List
+from typing import List
 
 import numpy as np
 import pandas as pd
@@ -34,65 +38,24 @@ import pandas as pd
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
 BENCH2_DIR = REPO_ROOT / "data" / "bench2"
-OUT_CSV = SCRIPT_DIR / "shannon_fraction.csv"
+OUT_CSV = SCRIPT_DIR / "alphabet_ceiling.csv"
 
 # dsDNA mass → storage-density conversion (derivation in codec/mahoraga_py/pipeline.py).
 EB_PER_G_PER_BIT_PER_BASE = 113.7
 
-# channel error rates (source: idsim/src/channel.rs, methods ChannelParams::hifi/lofi).
-# combined IDS probabilities are synth + seq added (independent-event approximation,
-# valid in the low-rate regime where both rates << 1).
-CHANNEL_RATES = {
-    "hifi": {
-        "synth_sub": 0.0005, "synth_del": 0.0002, "synth_ins": 0.0001,
-        "seq_sub":   0.0008, "seq_del":   0.0001, "seq_ins":   0.00005,
-    },
-    "lofi": {
-        "synth_sub": 0.005,  "synth_del": 0.005,  "synth_ins": 0.001,
-        "seq_sub":   0.003,  "seq_del":   0.0005, "seq_ins":   0.0002,
-    },
-}
+# alphabet size: 4 nucleotides → log2(4) = 2 bits/base.
+BITS_PER_BASE = 2.0
 
 CODECS = ["mahoraga", "dna_aeon", "mgcplus"]
 N_TRIALS_FULL = 30  # bench2 runs 30 trials per cell
 
 
-def _h_binary(p: float) -> float:
-    """binary entropy, clamped on the endpoints."""
-    if p <= 0.0 or p >= 1.0:
-        return 0.0
-    return -(p * math.log2(p) + (1.0 - p) * math.log2(1.0 - p))
-
-
-def combined_rates(channel: str) -> Dict[str, float]:
-    """synth + seq rates, additive (independent-event approximation).
-
-    returns {p_sub, p_del, p_ins}.
-    """
-    r = CHANNEL_RATES[channel]
-    return {
-        "p_sub": r["synth_sub"] + r["seq_sub"],
-        "p_del": r["synth_del"] + r["seq_del"],
-        "p_ins": r["synth_ins"] + r["seq_ins"],
-    }
-
-
-def capacity_per_base(p_sub: float, p_del: float, p_ins: float) -> float:
-    """IDS-channel capacity upper bound (bits/base).
-
-    C = 2 * (1 - h(p_sub)) - 2 * (p_ins + p_del)
-    """
-    return 2.0 * (1.0 - _h_binary(p_sub)) - 2.0 * (p_ins + p_del)
-
-
-def shannon_bound_density(channel: str, r: float) -> float:
-    """rho_shannon at coverage r (EB/g)."""
-    cr = combined_rates(channel)
-    C = capacity_per_base(cr["p_sub"], cr["p_del"], cr["p_ins"])
+def alphabet_ceiling_density(r: float) -> float:
+    """rho_max at coverage r (EB/g). channel-independent."""
     if r <= 0.0:
         return float("nan")
     coverage_factor = (1.0 - math.exp(-r)) / r
-    return C * coverage_factor * EB_PER_G_PER_BIT_PER_BASE
+    return BITS_PER_BASE * coverage_factor * EB_PER_G_PER_BIT_PER_BASE
 
 
 def load_bench2_records(bench2_dir: Path) -> pd.DataFrame:
@@ -158,57 +121,56 @@ def aggregate_per_cell(df: pd.DataFrame) -> pd.DataFrame:
     return grouped.reset_index()
 
 
-def attach_shannon(df: pd.DataFrame) -> pd.DataFrame:
-    """add shannon_bound_ebpg and shannon_fraction_pct columns.
+def attach_alphabet_ceiling(df: pd.DataFrame) -> pd.DataFrame:
+    """add alphabet_ceiling_ebpg and alphabet_ceiling_pct columns.
 
     only rows with n_trials_success == N_TRIALS_FULL (full 30/30) get a
-    non-NaN shannon_fraction_pct; partial-success cells stay NaN so missing
+    non-NaN alphabet_ceiling_pct; partial-success cells stay NaN so missing
     operating points do not silently contaminate downstream stats.
     """
     out = df.copy()
-    out["shannon_bound_ebpg"] = out.apply(
-        lambda row: shannon_bound_density(row["channel"], row["r"]), axis=1
-    )
+    out["alphabet_ceiling_ebpg"] = out["r"].apply(alphabet_ceiling_density)
     passes = out["n_trials_success"] == N_TRIALS_FULL
     frac = np.where(
-        passes & (out["shannon_bound_ebpg"] > 0),
-        out["density_ebpg"] / out["shannon_bound_ebpg"] * 100.0,
+        passes & (out["alphabet_ceiling_ebpg"] > 0),
+        out["density_ebpg"] / out["alphabet_ceiling_ebpg"] * 100.0,
         np.nan,
     )
-    out["shannon_fraction_pct"] = frac
+    out["alphabet_ceiling_pct"] = frac
     return out
 
 
 def sanity_checks(df: pd.DataFrame) -> None:
     """assertions + warnings called out in the spec."""
-    # monotonic non-increasing shannon bound in r (per channel)
+    # monotonic non-increasing ceiling in r (per channel; ceiling is actually
+    # channel-independent so this also checks that invariant).
     for channel in sorted(df["channel"].unique()):
         sub = df[df["channel"] == channel].sort_values("r")
-        bounds = sub["shannon_bound_ebpg"].to_numpy()
+        bounds = sub["alphabet_ceiling_ebpg"].to_numpy()
         diffs = np.diff(bounds)
         assert np.all(diffs <= 1e-9), (
-            f"shannon bound must be non-increasing in r for channel={channel}; "
+            f"alphabet ceiling must be non-increasing in r for channel={channel}; "
             f"offending diffs: {diffs}"
         )
-    # overshoots (fraction > 1.0): flag loudly but do not crash — a loose bound
-    # formulation could legitimately produce fractions above 1.
-    overshoots = df[(df["shannon_fraction_pct"].notna()) & (df["shannon_fraction_pct"] > 100.0)]
+    # overshoots (fraction > 1.0): flag loudly but do not crash. the alphabet
+    # ceiling is a loose bound, so >100% should not happen — if it does, the
+    # density computation is off.
+    overshoots = df[(df["alphabet_ceiling_pct"].notna()) & (df["alphabet_ceiling_pct"] > 100.0)]
     for _, row in overshoots.iterrows():
         warnings.warn(
-            f"shannon fraction > 100%: codec={row['codec']} channel={row['channel']} "
-            f"r={row['r']} frac={row['shannon_fraction_pct']:.2f}% — capacity bound "
-            "may be loose, or realized density is being overestimated.",
+            f"alphabet ceiling fraction > 100%: codec={row['codec']} channel={row['channel']} "
+            f"r={row['r']} frac={row['alphabet_ceiling_pct']:.2f}% — alphabet ceiling is a "
+            "loose bound so >100% indicates a problem in the density computation.",
             RuntimeWarning, stacklevel=2,
         )
-    # fraction in [0, 100] for rows that have it
-    valid = df[df["shannon_fraction_pct"].notna()]
-    assert (valid["shannon_fraction_pct"] >= 0.0).all(), "negative shannon fraction"
+    valid = df[df["alphabet_ceiling_pct"].notna()]
+    assert (valid["alphabet_ceiling_pct"] >= 0.0).all(), "negative alphabet ceiling fraction"
 
 
 def write_csv(df: pd.DataFrame, out_path: Path) -> None:
     cols = [
         "channel", "r", "codec",
-        "density_ebpg", "shannon_bound_ebpg", "shannon_fraction_pct",
+        "density_ebpg", "alphabet_ceiling_ebpg", "alphabet_ceiling_pct",
         "n_trials_success",
     ]
     out = df[cols].sort_values(["channel", "r", "codec"]).reset_index(drop=True)
@@ -217,26 +179,7 @@ def write_csv(df: pd.DataFrame, out_path: Path) -> None:
     print(f"wrote {out_path}  ({len(out)} rows)")
 
 
-def print_channel_provenance() -> None:
-    print("channel error rates (source: idsim/src/channel.rs ChannelParams):")
-    for ch in ("hifi", "lofi"):
-        raw = CHANNEL_RATES[ch]
-        combo = combined_rates(ch)
-        C = capacity_per_base(combo["p_sub"], combo["p_del"], combo["p_ins"])
-        print(
-            f"  {ch}: synth(sub={raw['synth_sub']:.4g}, del={raw['synth_del']:.4g}, "
-            f"ins={raw['synth_ins']:.4g})  "
-            f"seq(sub={raw['seq_sub']:.4g}, del={raw['seq_del']:.4g}, "
-            f"ins={raw['seq_ins']:.4g})  "
-            f"combined(sub={combo['p_sub']:.4g}, del={combo['p_del']:.4g}, "
-            f"ins={combo['p_ins']:.4g})  C={C:.4f} bits/base"
-        )
-    print()
-
-
 def main() -> int:
-    print_channel_provenance()
-
     df_trials = load_bench2_records(BENCH2_DIR)
     print(f"loaded {len(df_trials)} per-trial records from {BENCH2_DIR}")
     print(f"  codecs:   {sorted(df_trials['codec'].unique())}")
@@ -245,16 +188,16 @@ def main() -> int:
     print()
 
     agg = aggregate_per_cell(df_trials)
-    agg = attach_shannon(agg)
+    agg = attach_alphabet_ceiling(agg)
     sanity_checks(agg)
 
     write_csv(agg, OUT_CSV)
 
     # summary print
     print()
-    print("per-codec 30/30 shannon fractions (mean over cells that decoded):")
+    print("per-codec 30/30 alphabet-ceiling fractions (mean over cells that decoded):")
     full = agg[agg["n_trials_success"] == N_TRIALS_FULL]
-    summary = full.groupby(["codec", "channel"])["shannon_fraction_pct"].agg(["mean", "count"])
+    summary = full.groupby(["codec", "channel"])["alphabet_ceiling_pct"].agg(["mean", "count"])
     print(summary.round(2).to_string())
 
     return 0

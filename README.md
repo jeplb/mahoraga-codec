@@ -24,7 +24,7 @@ data/            benchmark JSON, organised to match the paper
   bench3/          DT4DDS pipeline replication (supp. table s3, fig 3)
   bench4/          longevity (supp. table s4, fig 4)
   bench5/          strand length sweep (supp. fig)
-shannon_fraction/  capacity-ceiling analysis (script + CSV)
+alphabet_ceiling/  capacity-ceiling analysis (script + CSV)
 ```
 
 Filenames encode the experimental cell: `<codec>-bench<n>-<channel>-<params>.json`. The per-trial JSONs carry seed, git SHA, codec/channel parameters, and timings.
@@ -101,14 +101,14 @@ The `data/bench2/python_*.json` files record per-trial results from the mahoraga
 
 ## Alphabet-ceiling fraction analysis
 
-How close does each codec get to the quaternary alphabet ceiling at each operating point? `shannon_fraction/compute_shannon_fraction.py` answers that from the bench2 trial JSONs. The alphabet ceiling is 2 bits per base pair. After accounting for stochastic dropout, the maximum density achievable at physical redundancy `r` is
+How close does each codec get to the quaternary alphabet ceiling at each operating point? `alphabet_ceiling/compute_alphabet_ceiling.py` answers that from the bench2 trial JSONs. The alphabet ceiling is 2 bits per base pair. After accounting for stochastic dropout, the maximum density achievable at physical redundancy `r` is
 
 ```
 rho_max  = 2 * (1 - exp(-r)) / r * 113.7   [EB/g]
 fraction = realized_density / rho_max      (30/30 cells only)
 ```
 
-and writes `shannon_fraction/shannon_fraction.csv` with one row per `(channel, r, codec)`. Dependencies are `numpy` and `pandas`. The script asserts the ceiling is monotone non-increasing in `r` and flags any fraction > 100% as a `RuntimeWarning`.
+and writes `alphabet_ceiling/alphabet_ceiling.csv` with one row per `(channel, r, codec)`. Dependencies are `numpy` and `pandas`. The script asserts the ceiling is monotone non-increasing in `r` and flags any fraction > 100% as a `RuntimeWarning`.
 
 The alphabet ceiling is channel-independent because it depends only on alphabet size (2 bits per base pair) and the Poisson survival fraction `(1 - exp(-r)) / r`. Channel-specific capacity bounds that incorporate per-base substitution and indel rates are strictly tighter than this ceiling and would give fractions closer to 100%. The ceiling is used here because it is the only universal closed-form bound and therefore allows cross-channel comparison without committing to a specific indel-substitution capacity formula.
 
