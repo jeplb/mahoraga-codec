@@ -10,13 +10,13 @@ for every (channel, r) cell:
     fraction    = realized_density / rho_shannon   (per codec, 30/30 cells only)
 
 output:
-    outputs/shannon_fraction.csv   one row per (channel, r, codec)
+    shannon_fraction.csv   (written next to this script)
 
 channel error rates are pulled from the idsim source (channel.rs:38-48)
 and printed at startup for reproducibility.
 
 run:
-    python3 scripts/compute_shannon_fraction.py
+    python3 shannon_fraction/compute_shannon_fraction.py
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ import pandas as pd
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
 BENCH2_DIR = REPO_ROOT / "data" / "bench2"
-OUT_CSV = REPO_ROOT / "outputs" / "shannon_fraction.csv"
+OUT_CSV = SCRIPT_DIR / "shannon_fraction.csv"
 
 # dsDNA mass → storage-density conversion (derivation in codec/mahoraga_py/pipeline.py).
 EB_PER_G_PER_BIT_PER_BASE = 113.7
