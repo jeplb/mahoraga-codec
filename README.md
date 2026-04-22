@@ -18,6 +18,7 @@ data/            benchmark JSON, organised to match the paper
   bench3/          DT4DDS pipeline replication (supp. table s3, fig 3)
   bench4/          longevity (supp. table s4, fig 4)
   bench5/          strand length sweep (supp. fig)
+shannon_fraction/  capacity-ceiling analysis (script + CSV)
 ```
 
 Filenames encode the experimental cell: `<codec>-bench<n>-<channel>-<params>.json`. The per-trial JSONs carry seed, git SHA, codec/channel parameters, and timings.
@@ -91,6 +92,34 @@ python3 bench4/plot_longevity.py          # density vs years at 25°C
 Each script reads from `data/benchN/` and writes its PDF + SVG next to itself. Regenerating the figures should take a couple of seconds. If you want to re-run the DT4DDS channel itself (rather than just replot the existing JSONs) you need the DT4DDS package; that pipeline is not in this repo.
 
 The `data/bench2/python_*.json` files record per-trial results from the mahoraga-py codec at 2 KB (60 trials) and 15,360 B (20 trials): `ok_py` / `md5_py` are the python port's outcome, `ok_rs` / `md5_rs` columns record a reference decoder's outcome on the same channel output for cross-validation, `byte_mismatch` flags any per-trial divergence. Pilot: 60/60 byte-identical. Full size: 20/20 byte-identical.
+
+## Shannon-fraction analysis
+
+How close does each codec get to the IDS-channel capacity at each operating point? `shannon_fraction/compute_shannon_fraction.py` answers that from the bench2 trial JSONs. It reads the idsim channel error rates (synth + seq, additive), computes per-base capacity
+
+```
+C           = 2 * (1 - h(p_sub)) - 2 * (p_ins + p_del)
+rho_shannon = C * (1 - exp(-r)) / r * 113.7   [EB/g]
+fraction    = realized_density / rho_shannon   (30/30 cells only)
+```
+
+and writes `shannon_fraction/shannon_fraction.csv` with one row per `(channel, r, codec)`.
+
+```
+python3 shannon_fraction/compute_shannon_fraction.py
+```
+
+Dependencies are `numpy` and `pandas`. The script asserts the bound is monotone non-increasing in `r` and flags any fraction > 100% as a `RuntimeWarning`. Channel rates are printed at startup so the computation is self-documenting.
+
+Headline numbers across all ten `r` values at 30/30:
+
+| codec     | hifi | lofi |
+|-----------|-----:|-----:|
+| mahoraga  | **69.1 %** | **55.7 %** |
+| dna_aeon  | 48.2 % (4 cells) | 39.2 % (1 cell) |
+| mgcplus   | 43.4 % (3 cells) | 43.0 % (5 cells) |
+
+Mahoraga is the only codec that reaches 30/30 at every `r`, and its Shannon-fraction is essentially flat across the coverage grid — the gap to capacity is a rate ceiling, not a coverage artefact.
 
 ## Caveats
 
