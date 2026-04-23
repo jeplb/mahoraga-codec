@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Shannon-fraction statistics for the Mahoraga paper.
+"""shannon-fraction statistics for the Mahoraga paper.
 
 reads the matched-parity benchmark JSONs under data/bench2/ and computes,
 for every (codec, channel, r) cell, the codec's storage density as a
 fraction of three successively tighter capacity ceilings.
 
-    1. alphabet ceiling  C_alpha = 2 bits/base (channel-independent)
-    2. Shomorony-Heckel  C_SH    = 2*(1-h(p_sub)) - 2*(p_ins+p_del)
-    3. Lenz et al        C_L     = 2 * (sum_d P_c(d)*C_d - beta*(1-exp(-c)))
+1. alphabet ceiling  C_alpha = 2 bits/base (channel-independent)
+2. Shomorony-Heckel  C_SH    = 2*(1-h(p_sub)) - 2*(p_ins+p_del)
+3. Lenz et al        C_L     = 2 * (sum_d P_c(d)*C_d - beta*(1-exp(-c)))
 
 all three are converted to EB/g by the same Poisson-survival scaling,
     rho_max_* = C_*  *  (1 - exp(-r)) / r  *  113.7
@@ -17,10 +17,10 @@ the Shomorony-Heckel and Lenz bounds inject the actual DT4DDS error
 rates (and for Lenz also the per-cell codebook size).
 
 caveats on the Lenz bound:
-  (a) Shomorony-Heckel and Lenz are not universally ordered. Shomorony
+(a) Shomorony-Heckel and Lenz are not universally ordered. Shomorony
       charges for indels additively (which Lenz does not model); on the
       lofi channel at high coverage Shomorony is the tighter of the two.
-  (b) the Lenz Poisson-reads-per-reference channel model underestimates
+(b) the Lenz Poisson-reads-per-reference channel model underestimates
       dropout relative to the DT4DDS compound model (Poisson(r) molecular
       copies each yielding ~sd reads) at very low physical redundancy.
       at r=0.02 (P(dropout)=0.98 under DT4DDS, 0.55 under Poisson(c=0.59)),
@@ -28,7 +28,6 @@ caveats on the Lenz bound:
       overshoot 100%. we warn on overshoot rather than suppress, so the
       user sees exactly which cells are affected.
 
-output: shannon_fraction.csv + shannon_fraction_table.tex (next to script)
 usage:  python3 shannon_fraction/compute_shannon_fraction.py
 """
 
