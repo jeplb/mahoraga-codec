@@ -28,6 +28,7 @@ caveats on the Lenz bound:
       overshoot 100%. we warn on overshoot rather than suppress, so the
       user sees exactly which cells are affected.
 
+output: shannon_fraction.csv (next to script)
 usage:  python3 shannon_fraction/compute_shannon_fraction.py
 """
 
@@ -48,7 +49,6 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
 BENCH2_DIR = REPO_ROOT / "data" / "bench2"
 OUT_CSV = SCRIPT_DIR / "shannon_fraction.csv"
-OUT_TEX = SCRIPT_DIR / "shannon_fraction_table.tex"
 
 # dsDNA mass → storage-density conversion (derivation in codec/mahoraga_py/pipeline.py).
 EB_PER_G_PER_BIT_PER_BASE = 113.7
@@ -394,88 +394,6 @@ def write_csv(df: pd.DataFrame, out_path: Path) -> None:
     print(f"wrote {out_path}  ({len(out)} rows)")
 
 
-def _fmt_pct(v: float) -> str:
-    if not math.isfinite(v):
-        return "---"
-    return f"{v:.1f}\\%"
-
-
-def _fmt_rho(v: float) -> str:
-    if not math.isfinite(v):
-        return "---"
-    return f"{v:.1f}"
-
-
-def write_latex_table(df: pd.DataFrame, out_path: Path) -> None:
-    """supplementary table: one row per (channel, r, codec) with all three
-    fractions. channels grouped by midrule, r ascending within each channel,
-    codecs in CODECS order within each r.
-    """
-    pretty_channel = {"hifi": "High-fidelity", "lofi": "Low-fidelity"}
-    pretty_codec = {"mahoraga": "Mahoraga", "dna_aeon": "DNA-Aeon", "mgcplus": "MGC+"}
-
-    lines: List[str] = []
-    lines.append(r"\begin{table}[H]")
-    lines.append(r"\centering")
-    lines.append(
-        r"\caption{Codec densities as a fraction of three capacity ceilings "
-        r"at matched-parity operating points. The alphabet ceiling "
-        r"$C_{\alpha}=2$~bits per base is channel-independent; the "
-        r"Shomorony-Heckel bound $C_{\mathrm{SH}}=2(1-h(p_{\mathrm{sub}}))"
-        r"-2(p_{\mathrm{ins}}+p_{\mathrm{del}})$ injects the combined "
-        r"synthesis-plus-sequencing error rates on each channel; the Lenz "
-        r"bound $C_{\mathrm{L}}$ adds per-cell codebook size $M$ via "
-        r"$\beta=\log_2 M / (2L)$ (with $L=126$~nt strands, i.e.\ $2L=252$ "
-        r"binary channel uses) and coverage $c=s_d(1-e^{-r})$. Each entry "
-        r"is the codec's density as a percentage of $\rho_{\max}$ for the "
-        r"given bound. Dashes denote cells that did not reach 30/30 "
-        r"decoding. Values above 100\% occur at $r=0.02$ because the Lenz "
-        r"Poisson-reads-per-reference channel model systematically "
-        r"underestimates the heavier molecular-copy dropout of the DT4DDS "
-        r"channel at very low physical redundancy, so the bound ceases to "
-        r"be a valid upper bound in that regime.}"
-    )
-    lines.append(r"\label{app:shannon_fraction_full}")
-    lines.append(r"\small")
-    lines.append(r"\setlength{\tabcolsep}{6pt}")
-    lines.append(r"\renewcommand{\arraystretch}{1.15}")
-    lines.append(r"\begin{tabular}{llrrrr}")
-    lines.append(r"\toprule")
-    lines.append(
-        r"Channel & $r$ & Codec & Alphabet & Shomorony-Heckel & Lenz \\"
-    )
-    lines.append(r"\midrule")
-
-    channels_order = ["hifi", "lofi"]
-    for i, ch in enumerate(channels_order):
-        sub = df[df["channel"] == ch].copy()
-        rs = sorted(sub["r"].unique())
-        for r in rs:
-            cell = sub[sub["r"] == r]
-            for codec in CODECS:
-                row = cell[cell["codec"] == codec]
-                if row.empty:
-                    continue
-                row = row.iloc[0]
-                line = (
-                    f"{pretty_channel[ch]} & {r:g} & {pretty_codec[codec]} & "
-                    f"{_fmt_pct(row['fraction_alphabet_pct'])} & "
-                    f"{_fmt_pct(row['fraction_shomorony_pct'])} & "
-                    f"{_fmt_pct(row['fraction_lenz_pct'])} \\\\"
-                )
-                lines.append(line)
-        if i < len(channels_order) - 1:
-            lines.append(r"\midrule")
-
-    lines.append(r"\bottomrule")
-    lines.append(r"\end{tabular}")
-    lines.append(r"\end{table}")
-
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text("\n".join(lines) + "\n")
-    print(f"wrote {out_path}")
-
-
 # ---------------------------------------------------------------------------
 # main
 # ---------------------------------------------------------------------------
@@ -524,7 +442,6 @@ def main() -> int:
     sanity_checks(agg)
 
     write_csv(agg, OUT_CSV)
-    write_latex_table(agg, OUT_TEX)
 
     print()
     print("per-codec 30/30 fractions (mean over cells that decoded):")
