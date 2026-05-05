@@ -112,13 +112,6 @@ and writes `alphabet_ceiling/alphabet_ceiling.csv` with one row per `(channel, r
 
 The alphabet ceiling is channel-independent because it depends only on alphabet size (2 bits per base pair) and the Poisson survival fraction `(1 - exp(-r)) / r`. Channel-specific capacity bounds that incorporate per-base substitution and indel rates are strictly tighter than this ceiling and would give fractions closer to 100%. The ceiling is used here because it is the only universal closed-form bound and therefore allows cross-channel comparison without committing to a specific indel-substitution capacity formula.
 
-## Caveats
-
-- Density constant 113.7 EB/g/bit/base lives in `codec/mahoraga_py/pipeline.py`. If you change it, the paper numbers stop being comparable.
-- Channel parameters in the benchmark harness are matched to Gimpel 2026 electrochemical synthesis + iSeq100 sequencing. Different instruments need a re-fit.
-- The pure-python codec prioritises readability over speed. A file larger than ~20 KB at low physical redundancy takes hours to decode; it's fine for audit, teaching, and reproducing the paper at the published sizes, but it is not a production codec.
-- Some `data/bench3/` cells have `sd=1` entries which are a sanity grid, not a paper claim. The paper quotes sd ∈ {15, 30}.
-
 ## License
 
 PolyForm Noncommercial 1.0.0. See `LICENSE`.
