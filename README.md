@@ -39,8 +39,6 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -e '.[test]'
 ```
 
-That's it. Only dependency is `numpy`.
-
 ## Smoke test
 
 ```python
