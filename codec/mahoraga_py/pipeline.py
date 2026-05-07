@@ -44,7 +44,15 @@ def _dc_for(channel: str, seq_len: int) -> int:
     base_dc = 84 if channel == "hifi" else (21 if channel == "lofi" else 84)
     n = seq_len * 2
     dv = 3
-    target_dc = base_dc * (seq_len / 126.0)
+    if seq_len <= 126:
+        # legacy linear: holds row count m essentially constant for L<=126,
+        # reproducing the canonical 126-nt design
+        target_dc = base_dc * (seq_len / 126.0)
+    else:
+        # sqrt schedule for L>126: scales d_c down sub-linearly so m grows
+        # ~L^1.5, which BP needs to absorb the higher absolute error count
+        # accumulated by longer strands
+        target_dc = base_dc * math.sqrt(126.0 / seq_len)
     target_m = max(1, round((n * dv) / target_dc))
     for delta in range(n * dv):
         for cand in (target_m + delta, max(0, target_m - delta)):
