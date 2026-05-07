@@ -47,7 +47,7 @@ from scipy.stats import binom, poisson
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent
-BENCH2_DIR = REPO_ROOT / "data" / "bench2"
+BENCH2_DIR = REPO_ROOT / "data" / "bench2" / "v2"
 OUT_CSV = SCRIPT_DIR / "shannon_fraction.csv"
 
 # dsDNA mass → storage-density conversion (derivation in codec/mahoraga_py/pipeline.py).

@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-BENCH4_DIR = SCRIPT_DIR.parent / "data" / "bench4"
+BENCH4_DIR = SCRIPT_DIR.parent / "data" / "bench4" / "v2"
 OUT_PDF = SCRIPT_DIR / "longevity.pdf"
 OUT_SVG = SCRIPT_DIR / "longevity.svg"
 
@@ -61,13 +61,12 @@ CODECS = [
 
 R_INITIAL_VALUES = (2.0, 5.0, 10.0)
 
-# expected (cliff, density, years) for sanity check
+# expected (cliff, density, years) for sanity check; v2 channel + margin=1.20
 EXPECTED = {
-    ("mahoraga",  5.0): (3.25,  34.1, 133.0),
-    ("mahoraga", 10.0): (4.0,   17.1, 282.0),
-    ("mgcplus",   5.0): (3.5,   19.5, 110.0),
-    ("mgcplus",  10.0): (4.0,    9.9, 282.0),
-    ("dna_aeon", 10.0): (5.0,   11.0, 214.0),
+    ("mahoraga",  5.0): (2.5,   30.7, 214.0),
+    ("mahoraga", 10.0): (3.0,   15.5, 372.0),
+    ("mgcplus",  10.0): (5.0,    9.9, 214.0),
+    ("dna_aeon", 10.0): (7.0,   11.0, 110.0),
 }
 
 

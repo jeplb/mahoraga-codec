@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DATA_DIR = SCRIPT_DIR.parent / "data" / "bench1"
+DATA_DIR = SCRIPT_DIR.parent / "data" / "bench1" / "v2"
 OUT_PDF = SCRIPT_DIR / "density_vs_r.pdf"
 OUT_SVG = SCRIPT_DIR / "density_vs_r.svg"
 
