@@ -1,0 +1,1459 @@
+{
+  "schema_version": 1,
+  "codec": "mgcplus",
+  "channel": "lofi",
+  "r": 1.0,
+  "depth": 30.0,
+  "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+  "input_size": 15360,
+  "n_trials": 30,
+  "started_at": "2026-05-04T20:35:43.935768+00:00",
+  "finished_at": "2026-05-04T20:38:55.574124+00:00",
+  "provenance": {
+    "schema_version": 1,
+    "codec_git_sha": "unknown",
+    "docker_image_id": "57faf98b9d0e",
+    "hmm_rs_version": "unknown",
+    "idsim_version": "0.2.0",
+    "channel_coverage_sigma": 0.3,
+    "hostname": "693db14623f4",
+    "python_version": "3.11.15",
+    "rustc_version": "1.83.0",
+    "channel_version": "v2",
+    "channel_extras": {
+      "sigma": 0.5,
+      "pcr": {
+        "preset": "q5",
+        "cycles_stage1": 15,
+        "cycles_stage2": 25,
+        "eff_mean": 0.95,
+        "eff_std": 0.0051,
+        "poly_sub_rate": 5e-07
+      },
+      "seq_pos_err": {
+        "e_min": 0.0001,
+        "e_max": 0.01,
+        "power": 2.0
+      },
+      "paired_end": {
+        "read_len": 150,
+        "overlap_min": 20
+      }
+    },
+    "parity_rate": 0.4612,
+    "parity_rate_actual": 0.46123650637880276,
+    "mgcplus_outer_redundancy": 940
+  },
+  "results": [
+    {
+      "trial": 0,
+      "seed": 0,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1226,
+      "decode_time_s": 80.656,
+      "preproc_time_s": 60.903,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1226,
+        "n_reads_pre_merge": 36780,
+        "n_reads_post_merge": 36780,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 270371330292.06406,
+        "pcr_amp_weight_max": 610941552313.856,
+        "pcr_amp_weight_cv": 0.10525600764447644,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 1,
+      "seed": 1,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1205,
+      "decode_time_s": 87.421,
+      "preproc_time_s": 96.245,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1205,
+        "n_reads_pre_merge": 36150,
+        "n_reads_post_merge": 36150,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 286474513932.37195,
+        "pcr_amp_weight_max": 544741159468.1478,
+        "pcr_amp_weight_cv": 0.10006929165671087,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 2,
+      "seed": 2,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1213,
+      "decode_time_s": 86.393,
+      "preproc_time_s": 79.78,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1213,
+        "n_reads_pre_merge": 36390,
+        "n_reads_post_merge": 36390,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 290758592178.9813,
+        "pcr_amp_weight_max": 577709953476.7574,
+        "pcr_amp_weight_cv": 0.1045430286743417,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 3,
+      "seed": 3,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1204,
+      "decode_time_s": 89.858,
+      "preproc_time_s": 57.02,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1204,
+        "n_reads_pre_merge": 36120,
+        "n_reads_post_merge": 36120,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 289530165706.55066,
+        "pcr_amp_weight_max": 564403306028.4038,
+        "pcr_amp_weight_cv": 0.10509373205086867,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 4,
+      "seed": 4,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1183,
+      "decode_time_s": 69.349,
+      "preproc_time_s": 78.368,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1183,
+        "n_reads_pre_merge": 35490,
+        "n_reads_post_merge": 35490,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 290788888919.54517,
+        "pcr_amp_weight_max": 564608950892.7338,
+        "pcr_amp_weight_cv": 0.10264130673598354,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 5,
+      "seed": 5,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1206,
+      "decode_time_s": 97.067,
+      "preproc_time_s": 80.537,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1206,
+        "n_reads_pre_merge": 36180,
+        "n_reads_post_merge": 36180,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 277900744746.81775,
+        "pcr_amp_weight_max": 567799004165.8278,
+        "pcr_amp_weight_cv": 0.10408985980830694,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 6,
+      "seed": 6,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1193,
+      "decode_time_s": 102.235,
+      "preproc_time_s": 72.546,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1193,
+        "n_reads_pre_merge": 35790,
+        "n_reads_post_merge": 35790,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 269067947771.0642,
+        "pcr_amp_weight_max": 566517145645.017,
+        "pcr_amp_weight_cv": 0.104303044071308,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 7,
+      "seed": 7,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1205,
+      "decode_time_s": 90.536,
+      "preproc_time_s": 95.798,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1205,
+        "n_reads_pre_merge": 36150,
+        "n_reads_post_merge": 36150,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 278052710329.1273,
+        "pcr_amp_weight_max": 594201448984.6936,
+        "pcr_amp_weight_cv": 0.10239269068681449,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 8,
+      "seed": 8,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1202,
+      "decode_time_s": 73.789,
+      "preproc_time_s": 70.812,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1202,
+        "n_reads_pre_merge": 36060,
+        "n_reads_post_merge": 36060,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 286884115692.99115,
+        "pcr_amp_weight_max": 564435694228.5396,
+        "pcr_amp_weight_cv": 0.10709322017006251,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 9,
+      "seed": 9,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1161,
+      "decode_time_s": 94.402,
+      "preproc_time_s": 65.022,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1161,
+        "n_reads_pre_merge": 34830,
+        "n_reads_post_merge": 34830,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 267213964787.95407,
+        "pcr_amp_weight_max": 548335153581.0002,
+        "pcr_amp_weight_cv": 0.10507917735115882,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 10,
+      "seed": 10,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1186,
+      "decode_time_s": 77.594,
+      "preproc_time_s": 84.339,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1186,
+        "n_reads_pre_merge": 35580,
+        "n_reads_post_merge": 35580,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 283817896758.16693,
+        "pcr_amp_weight_max": 565452646744.3624,
+        "pcr_amp_weight_cv": 0.10306737721786051,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 11,
+      "seed": 11,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1247,
+      "decode_time_s": 76.073,
+      "preproc_time_s": 100.884,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1247,
+        "n_reads_pre_merge": 37410,
+        "n_reads_post_merge": 37410,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 285047507423.8744,
+        "pcr_amp_weight_max": 564822649338.8569,
+        "pcr_amp_weight_cv": 0.10574902087547962,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 12,
+      "seed": 12,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1189,
+      "decode_time_s": 91.51,
+      "preproc_time_s": 66.06,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1189,
+        "n_reads_pre_merge": 35670,
+        "n_reads_post_merge": 35670,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 288953711719.4994,
+        "pcr_amp_weight_max": 569322316605.3895,
+        "pcr_amp_weight_cv": 0.10504810509284354,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 13,
+      "seed": 13,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1209,
+      "decode_time_s": 87.874,
+      "preproc_time_s": 82.776,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1209,
+        "n_reads_pre_merge": 36270,
+        "n_reads_post_merge": 36270,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 272431544562.41147,
+        "pcr_amp_weight_max": 557232075856.0513,
+        "pcr_amp_weight_cv": 0.1026226328676558,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 14,
+      "seed": 14,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1195,
+      "decode_time_s": 81.239,
+      "preproc_time_s": 79.196,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1195,
+        "n_reads_pre_merge": 35850,
+        "n_reads_post_merge": 35850,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 288051171347.9987,
+        "pcr_amp_weight_max": 599216853569.6838,
+        "pcr_amp_weight_cv": 0.10542498667152686,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 15,
+      "seed": 15,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1154,
+      "decode_time_s": 94.389,
+      "preproc_time_s": 72.292,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1154,
+        "n_reads_pre_merge": 34620,
+        "n_reads_post_merge": 34620,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 277476885117.1711,
+        "pcr_amp_weight_max": 573710494942.2832,
+        "pcr_amp_weight_cv": 0.1090294047435268,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 16,
+      "seed": 16,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1207,
+      "decode_time_s": 98.326,
+      "preproc_time_s": 80.432,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1207,
+        "n_reads_pre_merge": 36210,
+        "n_reads_post_merge": 36210,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 291379175133.4892,
+        "pcr_amp_weight_max": 560602162565.4547,
+        "pcr_amp_weight_cv": 0.10521948321716112,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 17,
+      "seed": 17,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1240,
+      "decode_time_s": 99.666,
+      "preproc_time_s": 67.929,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1240,
+        "n_reads_pre_merge": 37200,
+        "n_reads_post_merge": 37200,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 288321472298.7239,
+        "pcr_amp_weight_max": 565776828990.8142,
+        "pcr_amp_weight_cv": 0.10152219492735763,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 18,
+      "seed": 18,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1164,
+      "decode_time_s": 85.334,
+      "preproc_time_s": 67.31,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1164,
+        "n_reads_pre_merge": 34920,
+        "n_reads_post_merge": 34920,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 281797177235.9104,
+        "pcr_amp_weight_max": 545757598929.5282,
+        "pcr_amp_weight_cv": 0.10128901285184573,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 19,
+      "seed": 19,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1203,
+      "decode_time_s": 72.166,
+      "preproc_time_s": 81.252,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1203,
+        "n_reads_pre_merge": 36090,
+        "n_reads_post_merge": 36090,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 275033752348.1035,
+        "pcr_amp_weight_max": 556970800091.7325,
+        "pcr_amp_weight_cv": 0.10549302245150177,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 20,
+      "seed": 20,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1212,
+      "decode_time_s": 91.368,
+      "preproc_time_s": 62.098,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1212,
+        "n_reads_pre_merge": 36360,
+        "n_reads_post_merge": 36360,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 276010483941.1074,
+        "pcr_amp_weight_max": 583659269994.9341,
+        "pcr_amp_weight_cv": 0.10695746908755238,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 21,
+      "seed": 21,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1168,
+      "decode_time_s": 79.218,
+      "preproc_time_s": 50.146,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1168,
+        "n_reads_pre_merge": 35040,
+        "n_reads_post_merge": 35040,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 273099310801.9689,
+        "pcr_amp_weight_max": 561649432157.6869,
+        "pcr_amp_weight_cv": 0.10673242173503912,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 22,
+      "seed": 22,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1193,
+      "decode_time_s": 73.01,
+      "preproc_time_s": 51.86,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1193,
+        "n_reads_pre_merge": 35790,
+        "n_reads_post_merge": 35790,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 273330197779.61493,
+        "pcr_amp_weight_max": 579645992661.6954,
+        "pcr_amp_weight_cv": 0.10487974579377071,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 23,
+      "seed": 23,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1217,
+      "decode_time_s": 96.377,
+      "preproc_time_s": 80.138,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1217,
+        "n_reads_pre_merge": 36510,
+        "n_reads_post_merge": 36510,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 272593786398.4578,
+        "pcr_amp_weight_max": 580353398897.8448,
+        "pcr_amp_weight_cv": 0.10443577449831876,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 24,
+      "seed": 24,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1203,
+      "decode_time_s": 92.557,
+      "preproc_time_s": 56.044,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1203,
+        "n_reads_pre_merge": 36090,
+        "n_reads_post_merge": 36090,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 281745458276.72534,
+        "pcr_amp_weight_max": 554087373548.0226,
+        "pcr_amp_weight_cv": 0.10543625883816989,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 25,
+      "seed": 25,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1192,
+      "decode_time_s": 91.335,
+      "preproc_time_s": 56.139,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1192,
+        "n_reads_pre_merge": 35760,
+        "n_reads_post_merge": 35760,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 274873474578.01428,
+        "pcr_amp_weight_max": 569727395099.7974,
+        "pcr_amp_weight_cv": 0.1032558904561305,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 26,
+      "seed": 26,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1159,
+      "decode_time_s": 90.506,
+      "preproc_time_s": 77.904,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1159,
+        "n_reads_pre_merge": 34770,
+        "n_reads_post_merge": 34770,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 284438004584.3368,
+        "pcr_amp_weight_max": 546729901989.22766,
+        "pcr_amp_weight_cv": 0.10362669609385643,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 27,
+      "seed": 27,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1223,
+      "decode_time_s": 71.72,
+      "preproc_time_s": 88.822,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1223,
+        "n_reads_pre_merge": 36690,
+        "n_reads_post_merge": 36690,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 267944761864.72208,
+        "pcr_amp_weight_max": 565836010376.6239,
+        "pcr_amp_weight_cv": 0.10406161450540086,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 28,
+      "seed": 28,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1196,
+      "decode_time_s": 96.968,
+      "preproc_time_s": 68.591,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1196,
+        "n_reads_pre_merge": 35880,
+        "n_reads_post_merge": 35880,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 266273528116.28494,
+        "pcr_amp_weight_max": 539236885506.847,
+        "pcr_amp_weight_cv": 0.10597796168355361,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 29,
+      "seed": 29,
+      "success": true,
+      "failure_reason": "success",
+      "density_eb_per_g": 56.192,
+      "n_seqs": 2038,
+      "n_surviving": 1198,
+      "decode_time_s": 99.14,
+      "preproc_time_s": 73.595,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 2038,
+        "n_surviving_after_poisson": 1198,
+        "n_reads_pre_merge": 35940,
+        "n_reads_post_merge": 35940,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 279317985932.4841,
+        "pcr_amp_weight_max": 573004187995.0168,
+        "pcr_amp_weight_cv": 0.1061002771650768,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1459 @@
+{
+  "schema_version": 1,
+  "codec": "dna_fountain",
+  "channel": "hifi",
+  "r": 0.5,
+  "depth": 30.0,
+  "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+  "input_size": 15360,
+  "n_trials": 30,
+  "started_at": "2026-05-05T17:18:07.285354+00:00",
+  "finished_at": "2026-05-05T17:18:08.948511+00:00",
+  "provenance": {
+    "schema_version": 1,
+    "codec_git_sha": "unknown",
+    "docker_image_id": "b1c0ffee780b",
+    "hmm_rs_version": "unknown",
+    "idsim_version": "0.2.0",
+    "channel_coverage_sigma": 0.3,
+    "hostname": "312d9fd97bc0",
+    "python_version": "3.11.15",
+    "rustc_version": "1.83.0",
+    "channel_version": "v2",
+    "channel_extras": {
+      "sigma": 0.5,
+      "pcr": {
+        "preset": "q5",
+        "cycles_stage1": 15,
+        "cycles_stage2": 25,
+        "eff_mean": 0.95,
+        "eff_std": 0.0051,
+        "poly_sub_rate": 5e-07
+      },
+      "seq_pos_err": {
+        "e_min": 0.0001,
+        "e_max": 0.01,
+        "power": 2.0
+      },
+      "paired_end": {
+        "read_len": 150,
+        "overlap_min": 20
+      }
+    },
+    "dna_fountain_preprocessing": "raw_reads",
+    "parity_rate": null,
+    "dna_fountain_alpha": 0.5
+  },
+  "results": [
+    {
+      "trial": 0,
+      "seed": 0,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 291,
+      "decode_time_s": 0.591,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 291,
+        "n_reads_pre_merge": 8730,
+        "n_reads_post_merge": 8730,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 301720088107.18915,
+        "pcr_amp_weight_max": 610941552313.856,
+        "pcr_amp_weight_cv": 0.10300206830219752,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 1,
+      "seed": 1,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 284,
+      "decode_time_s": 0.403,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 284,
+        "n_reads_pre_merge": 8520,
+        "n_reads_post_merge": 8520,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 298630253224.23047,
+        "pcr_amp_weight_max": 536654716051.8963,
+        "pcr_amp_weight_cv": 0.10251988502344773,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 2,
+      "seed": 2,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 283,
+      "decode_time_s": 0.7,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 283,
+        "n_reads_pre_merge": 8490,
+        "n_reads_post_merge": 8490,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 294450673219.06744,
+        "pcr_amp_weight_max": 577709953476.7574,
+        "pcr_amp_weight_cv": 0.11014562087582289,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 3,
+      "seed": 3,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 283,
+      "decode_time_s": 0.575,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 283,
+        "n_reads_pre_merge": 8490,
+        "n_reads_post_merge": 8490,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 289530165706.55066,
+        "pcr_amp_weight_max": 562210130370.8042,
+        "pcr_amp_weight_cv": 0.10306715634158149,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 4,
+      "seed": 4,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 282,
+      "decode_time_s": 0.536,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 282,
+        "n_reads_pre_merge": 8460,
+        "n_reads_post_merge": 8460,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 290788888919.54517,
+        "pcr_amp_weight_max": 564608950892.7338,
+        "pcr_amp_weight_cv": 0.10320890647150081,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 5,
+      "seed": 5,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 281,
+      "decode_time_s": 0.578,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 281,
+        "n_reads_pre_merge": 8430,
+        "n_reads_post_merge": 8430,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 284968455703.2148,
+        "pcr_amp_weight_max": 562654909763.7391,
+        "pcr_amp_weight_cv": 0.10531011869754381,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 6,
+      "seed": 6,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 268,
+      "decode_time_s": 0.579,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 268,
+        "n_reads_pre_merge": 8040,
+        "n_reads_post_merge": 8040,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 275070965126.5045,
+        "pcr_amp_weight_max": 522499688371.48505,
+        "pcr_amp_weight_cv": 0.10262055446885687,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 7,
+      "seed": 7,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 291,
+      "decode_time_s": 0.542,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 291,
+        "n_reads_pre_merge": 8730,
+        "n_reads_post_merge": 8730,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 312718508506.2326,
+        "pcr_amp_weight_max": 594201448984.6936,
+        "pcr_amp_weight_cv": 0.09752852823243378,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 8,
+      "seed": 8,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 272,
+      "decode_time_s": 0.723,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 272,
+        "n_reads_pre_merge": 8160,
+        "n_reads_post_merge": 8160,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 286884115692.99115,
+        "pcr_amp_weight_max": 564435694228.5396,
+        "pcr_amp_weight_cv": 0.10948558599584242,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 9,
+      "seed": 9,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 256,
+      "decode_time_s": 0.6,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 256,
+        "n_reads_pre_merge": 7680,
+        "n_reads_post_merge": 7680,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 285405558075.95233,
+        "pcr_amp_weight_max": 534744556106.8504,
+        "pcr_amp_weight_cv": 0.10765678159389155,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 10,
+      "seed": 10,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 267,
+      "decode_time_s": 0.471,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 267,
+        "n_reads_pre_merge": 8010,
+        "n_reads_post_merge": 8010,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 296824877929.064,
+        "pcr_amp_weight_max": 565452646744.3624,
+        "pcr_amp_weight_cv": 0.10349977934387283,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 11,
+      "seed": 11,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 236,
+      "decode_time_s": 0.693,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 236,
+        "n_reads_pre_merge": 7080,
+        "n_reads_post_merge": 7080,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 292962067573.11163,
+        "pcr_amp_weight_max": 564822649338.8569,
+        "pcr_amp_weight_cv": 0.1028713120278813,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 12,
+      "seed": 12,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 268,
+      "decode_time_s": 0.421,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 268,
+        "n_reads_pre_merge": 8040,
+        "n_reads_post_merge": 8040,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 295807645502.4304,
+        "pcr_amp_weight_max": 548733173332.58905,
+        "pcr_amp_weight_cv": 0.10435043019190393,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 13,
+      "seed": 13,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 288,
+      "decode_time_s": 0.697,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 288,
+        "n_reads_pre_merge": 8640,
+        "n_reads_post_merge": 8640,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 272431544562.41147,
+        "pcr_amp_weight_max": 557232075856.0513,
+        "pcr_amp_weight_cv": 0.10192951333316329,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 14,
+      "seed": 14,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 281,
+      "decode_time_s": 0.642,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 281,
+        "n_reads_pre_merge": 8430,
+        "n_reads_post_merge": 8430,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 288051171347.9987,
+        "pcr_amp_weight_max": 599216853569.6838,
+        "pcr_amp_weight_cv": 0.10999652933229671,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 15,
+      "seed": 15,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 264,
+      "decode_time_s": 0.671,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 264,
+        "n_reads_pre_merge": 7920,
+        "n_reads_post_merge": 7920,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 277476885117.1711,
+        "pcr_amp_weight_max": 543382588927.6375,
+        "pcr_amp_weight_cv": 0.11119633373096616,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 16,
+      "seed": 16,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 273,
+      "decode_time_s": 0.551,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 273,
+        "n_reads_pre_merge": 8190,
+        "n_reads_post_merge": 8190,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 291379175133.4892,
+        "pcr_amp_weight_max": 551926410816.0402,
+        "pcr_amp_weight_cv": 0.10369797271471062,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 17,
+      "seed": 17,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 266,
+      "decode_time_s": 0.607,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 266,
+        "n_reads_pre_merge": 7980,
+        "n_reads_post_merge": 7980,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 294793628846.5993,
+        "pcr_amp_weight_max": 523535515055.0313,
+        "pcr_amp_weight_cv": 0.1006577065186337,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 18,
+      "seed": 18,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 257,
+      "decode_time_s": 0.542,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 257,
+        "n_reads_pre_merge": 7710,
+        "n_reads_post_merge": 7710,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 288589079461.47156,
+        "pcr_amp_weight_max": 519085142774.5609,
+        "pcr_amp_weight_cv": 0.09758378470089109,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 19,
+      "seed": 19,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 273,
+      "decode_time_s": 0.457,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 273,
+        "n_reads_pre_merge": 8190,
+        "n_reads_post_merge": 8190,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 279617407730.8652,
+        "pcr_amp_weight_max": 553078428016.1526,
+        "pcr_amp_weight_cv": 0.10617144844160264,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 20,
+      "seed": 20,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 275,
+      "decode_time_s": 0.529,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 275,
+        "n_reads_pre_merge": 8250,
+        "n_reads_post_merge": 8250,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 276010483941.1074,
+        "pcr_amp_weight_max": 583659269994.9341,
+        "pcr_amp_weight_cv": 0.1033366513482132,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 21,
+      "seed": 21,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 260,
+      "decode_time_s": 0.533,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 260,
+        "n_reads_pre_merge": 7800,
+        "n_reads_post_merge": 7800,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 285270154034.4138,
+        "pcr_amp_weight_max": 561649432157.6869,
+        "pcr_amp_weight_cv": 0.10903457205404883,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 22,
+      "seed": 22,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 293,
+      "decode_time_s": 0.484,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 293,
+        "n_reads_pre_merge": 8790,
+        "n_reads_post_merge": 8790,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 295123694604.41797,
+        "pcr_amp_weight_max": 542890502971.068,
+        "pcr_amp_weight_cv": 0.10425726479690346,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 23,
+      "seed": 23,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 291,
+      "decode_time_s": 0.65,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 291,
+        "n_reads_pre_merge": 8730,
+        "n_reads_post_merge": 8730,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 290268058752.24695,
+        "pcr_amp_weight_max": 527936206666.45435,
+        "pcr_amp_weight_cv": 0.10670615391815783,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 24,
+      "seed": 24,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 267,
+      "decode_time_s": 0.653,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 267,
+        "n_reads_pre_merge": 8010,
+        "n_reads_post_merge": 8010,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 281745458276.72534,
+        "pcr_amp_weight_max": 530470951744.5073,
+        "pcr_amp_weight_cv": 0.10405671473205198,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 25,
+      "seed": 25,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 264,
+      "decode_time_s": 0.68,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 264,
+        "n_reads_pre_merge": 7920,
+        "n_reads_post_merge": 7920,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 274873474578.01428,
+        "pcr_amp_weight_max": 569727395099.7974,
+        "pcr_amp_weight_cv": 0.10453428775506082,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 26,
+      "seed": 26,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 277,
+      "decode_time_s": 0.449,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 277,
+        "n_reads_pre_merge": 8310,
+        "n_reads_post_merge": 8310,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 292472040346.21985,
+        "pcr_amp_weight_max": 546729901989.22766,
+        "pcr_amp_weight_cv": 0.10443846677379606,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 27,
+      "seed": 27,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 285,
+      "decode_time_s": 0.507,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 285,
+        "n_reads_pre_merge": 8550,
+        "n_reads_post_merge": 8550,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 281355544775.3451,
+        "pcr_amp_weight_max": 565836010376.6239,
+        "pcr_amp_weight_cv": 0.10159527164003566,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 28,
+      "seed": 28,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 287,
+      "decode_time_s": 0.345,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 287,
+        "n_reads_pre_merge": 8610,
+        "n_reads_post_merge": 8610,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 295599093596.2153,
+        "pcr_amp_weight_max": 538543651586.6017,
+        "pcr_amp_weight_cv": 0.10100500236129593,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 29,
+      "seed": 29,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 254.972,
+      "n_seqs": 721,
+      "n_surviving": 286,
+      "decode_time_s": 0.392,
+      "preproc_time_s": 0.0,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "usage: decode.py [-h] -f FILE_IN [-d HEADER_SIZE] -n CHUNK_NUM --rs RS\n                 [--delta DELTA] [--c_dist C_DIST] --out OUT [--fasta]\n                 [--no_correction] [--debug_barcodes DEBUG_BARCODES] --gc GC\n                 -m MAX_HOMOPOLYMER [--mock] [--max_hamming MAX_HAMMING]\n                 [--max_line MAX_LINE] [--size SIZE] [--rand_numpy]\n                 [--truth TRUTH] [--aggressive AGGRESSIVE]\ndecode.py: error: unrecognized arguments: --max_mahoraga 0\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 721,
+        "n_surviving_after_poisson": 286,
+        "n_reads_pre_merge": 8580,
+        "n_reads_post_merge": 8580,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 295815265836.0229,
+        "pcr_amp_weight_max": 573004187995.0168,
+        "pcr_amp_weight_cv": 0.10476984858272476,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    }
+  ]
+}

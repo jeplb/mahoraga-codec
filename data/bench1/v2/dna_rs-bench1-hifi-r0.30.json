@@ -1,0 +1,1459 @@
+{
+  "schema_version": 1,
+  "codec": "dna_rs",
+  "channel": "hifi",
+  "r": 0.3,
+  "depth": 30.0,
+  "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+  "input_size": 15360,
+  "n_trials": 30,
+  "started_at": "2026-05-05T16:38:00.268843+00:00",
+  "finished_at": "2026-05-05T16:41:28.780277+00:00",
+  "provenance": {
+    "schema_version": 1,
+    "codec_git_sha": "unknown",
+    "docker_image_id": "d6c3ed7cc887",
+    "hmm_rs_version": "unknown",
+    "idsim_version": "0.2.0",
+    "channel_coverage_sigma": 0.3,
+    "hostname": "0958feb52b40",
+    "python_version": "3.11.15",
+    "rustc_version": "1.83.0",
+    "channel_version": "v2",
+    "channel_extras": {
+      "sigma": 0.5,
+      "pcr": {
+        "preset": "q5",
+        "cycles_stage1": 15,
+        "cycles_stage2": 25,
+        "eff_mean": 0.95,
+        "eff_std": 0.0051,
+        "poly_sub_rate": 5e-07
+      },
+      "seq_pos_err": {
+        "e_min": 0.0001,
+        "e_max": 0.01,
+        "power": 2.0
+      },
+      "paired_end": {
+        "read_len": 150,
+        "overlap_min": 20
+      }
+    },
+    "dna_rs_preprocessing": "raw_reads",
+    "dna_rs_outer_k": 170,
+    "parity_rate": null
+  },
+  "results": [
+    {
+      "trial": 0,
+      "seed": 0,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1204,
+      "decode_time_s": 191.759,
+      "preproc_time_s": 0.01,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "34472ef73126058da0b8856f02877b1f",
+      "stderr_tail": "trimmed dec_bytes 218320951 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1204,
+        "n_reads_pre_merge": 36120,
+        "n_reads_post_merge": 36120,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 270371330292.06406,
+        "pcr_amp_weight_max": 610941552313.856,
+        "pcr_amp_weight_cv": 0.10525405875756323,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 1,
+      "seed": 1,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1158,
+      "decode_time_s": 195.809,
+      "preproc_time_s": 0.015,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "98999d73c61cf72b27ad15393a9b6742",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1158,
+        "n_reads_pre_merge": 34740,
+        "n_reads_post_merge": 34740,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 275662372580.62115,
+        "pcr_amp_weight_max": 572061849217.6592,
+        "pcr_amp_weight_cv": 0.10195471870455129,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 2,
+      "seed": 2,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1208,
+      "decode_time_s": 191.907,
+      "preproc_time_s": 0.011,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "f2708b4e2c20063c001fcab44b16b695",
+      "stderr_tail": "trimmed dec_bytes 1233327694 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1208,
+        "n_reads_pre_merge": 36240,
+        "n_reads_post_merge": 36240,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 240498259646.93875,
+        "pcr_amp_weight_max": 577709953476.7574,
+        "pcr_amp_weight_cv": 0.10397060297521779,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 3,
+      "seed": 3,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1134,
+      "decode_time_s": 201.548,
+      "preproc_time_s": 0.025,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "f04b434e509d5f832a404cc2d6c86279",
+      "stderr_tail": "trimmed dec_bytes 1315130845 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1134,
+        "n_reads_pre_merge": 34020,
+        "n_reads_post_merge": 34020,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 264754940974.01053,
+        "pcr_amp_weight_max": 600894193850.3569,
+        "pcr_amp_weight_cv": 0.1047248177747012,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 4,
+      "seed": 4,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1143,
+      "decode_time_s": 198.198,
+      "preproc_time_s": 0.013,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "729f9c800f89b5913b7714a8818c2748",
+      "stderr_tail": "trimmed dec_bytes 160948670 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1143,
+        "n_reads_pre_merge": 34290,
+        "n_reads_post_merge": 34290,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 287043459785.07196,
+        "pcr_amp_weight_max": 655974995315.195,
+        "pcr_amp_weight_cv": 0.10309235701502503,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 5,
+      "seed": 5,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1116,
+      "decode_time_s": 202.083,
+      "preproc_time_s": 0.021,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "ac0521df6f749f6b0dc66482d78fe58d",
+      "stderr_tail": "trimmed dec_bytes 1342193576 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1116,
+        "n_reads_pre_merge": 33480,
+        "n_reads_post_merge": 33480,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 276795644570.755,
+        "pcr_amp_weight_max": 580364097589.4174,
+        "pcr_amp_weight_cv": 0.10388125025127523,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 6,
+      "seed": 6,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1154,
+      "decode_time_s": 199.681,
+      "preproc_time_s": 0.01,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "411ee61e26061cb142633e43d96eeef5",
+      "stderr_tail": "trimmed dec_bytes 2684356818 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1154,
+        "n_reads_pre_merge": 34620,
+        "n_reads_post_merge": 34620,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 266437139883.48288,
+        "pcr_amp_weight_max": 567521924798.6101,
+        "pcr_amp_weight_cv": 0.10473826660443833,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 7,
+      "seed": 7,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1179,
+      "decode_time_s": 195.41,
+      "preproc_time_s": 0.011,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "32a96d2d2800e965f52579fc7823a3c3",
+      "stderr_tail": "trimmed dec_bytes 1879055524 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1179,
+        "n_reads_pre_merge": 35370,
+        "n_reads_post_merge": 35370,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 273116568238.75876,
+        "pcr_amp_weight_max": 594201448984.6936,
+        "pcr_amp_weight_cv": 0.10277102824188426,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 8,
+      "seed": 8,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1166,
+      "decode_time_s": 198.074,
+      "preproc_time_s": 0.012,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "465e765af82806172e39fd39823235ad",
+      "stderr_tail": "trimmed dec_bytes 1584813920 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1166,
+        "n_reads_pre_merge": 34980,
+        "n_reads_post_merge": 34980,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 251736091995.44547,
+        "pcr_amp_weight_max": 567230751005.9515,
+        "pcr_amp_weight_cv": 0.10694336311043764,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 9,
+      "seed": 9,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1173,
+      "decode_time_s": 196.629,
+      "preproc_time_s": 0.016,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "b9fd4a37b0341f13ea6421e7d11c8248",
+      "stderr_tail": "trimmed dec_bytes 1610617952 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1173,
+        "n_reads_pre_merge": 35190,
+        "n_reads_post_merge": 35190,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 267213964787.95407,
+        "pcr_amp_weight_max": 555379243746.9723,
+        "pcr_amp_weight_cv": 0.10575422980017024,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 10,
+      "seed": 10,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1147,
+      "decode_time_s": 200.533,
+      "preproc_time_s": 0.011,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "1755038fa7faa7d55eb0a7f5917230dc",
+      "stderr_tail": "trimmed dec_bytes 2367505020 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1147,
+        "n_reads_pre_merge": 34410,
+        "n_reads_post_merge": 34410,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 250621949585.3047,
+        "pcr_amp_weight_max": 579602826308.7809,
+        "pcr_amp_weight_cv": 0.10424428349491238,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 11,
+      "seed": 11,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1138,
+      "decode_time_s": 199.391,
+      "preproc_time_s": 0.017,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "c4f06b46ef9ee05eab69949f69d23d66",
+      "stderr_tail": "trimmed dec_bytes 1342190641 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1138,
+        "n_reads_pre_merge": 34140,
+        "n_reads_post_merge": 34140,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 266651929100.33148,
+        "pcr_amp_weight_max": 579952486228.8439,
+        "pcr_amp_weight_cv": 0.1042025649052521,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 12,
+      "seed": 12,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1113,
+      "decode_time_s": 202.009,
+      "preproc_time_s": 0.018,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "0a1d8440af9d17159dd504733998427b",
+      "stderr_tail": "trimmed dec_bytes 638598144 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1113,
+        "n_reads_pre_merge": 33390,
+        "n_reads_post_merge": 33390,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 288599156236.68854,
+        "pcr_amp_weight_max": 612144644382.9332,
+        "pcr_amp_weight_cv": 0.10545588970156143,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 13,
+      "seed": 13,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1101,
+      "decode_time_s": 205.902,
+      "preproc_time_s": 0.008,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "e567ed8d1651f5a639cea3821e99a58a",
+      "stderr_tail": "trimmed dec_bytes 2885423391 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1101,
+        "n_reads_pre_merge": 33030,
+        "n_reads_post_merge": 33030,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 272431544562.41147,
+        "pcr_amp_weight_max": 557232075856.0513,
+        "pcr_amp_weight_cv": 0.10463157359304416,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 14,
+      "seed": 14,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1149,
+      "decode_time_s": 197.7,
+      "preproc_time_s": 0.012,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "88d0fffd813a7ffba56672da457340ea",
+      "stderr_tail": "trimmed dec_bytes 304689980 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1149,
+        "n_reads_pre_merge": 34470,
+        "n_reads_post_merge": 34470,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 287860641073.3542,
+        "pcr_amp_weight_max": 599216853569.6838,
+        "pcr_amp_weight_cv": 0.1032897259977807,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 15,
+      "seed": 15,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1132,
+      "decode_time_s": 199.211,
+      "preproc_time_s": 0.017,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "1a65e35590e75ce2ad700e2ff15842f1",
+      "stderr_tail": "trimmed dec_bytes 397014862 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1132,
+        "n_reads_pre_merge": 33960,
+        "n_reads_post_merge": 33960,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 268023207419.55365,
+        "pcr_amp_weight_max": 579705079241.3727,
+        "pcr_amp_weight_cv": 0.10858062071254558,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 16,
+      "seed": 16,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1181,
+      "decode_time_s": 193.403,
+      "preproc_time_s": 0.009,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "be08c8eb5d2563954296e6562b7e4211",
+      "stderr_tail": "trimmed dec_bytes 9092096 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1181,
+        "n_reads_pre_merge": 35430,
+        "n_reads_post_merge": 35430,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 283747328110.159,
+        "pcr_amp_weight_max": 567930602761.9354,
+        "pcr_amp_weight_cv": 0.10509905499596828,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 17,
+      "seed": 17,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1153,
+      "decode_time_s": 197.41,
+      "preproc_time_s": 0.009,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "b23b7b9feb2a9fae046437add2e108d4",
+      "stderr_tail": "trimmed dec_bytes 1477590016 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1153,
+        "n_reads_pre_merge": 34590,
+        "n_reads_post_merge": 34590,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 278611662993.46106,
+        "pcr_amp_weight_max": 604616804997.1954,
+        "pcr_amp_weight_cv": 0.10416656569262571,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 18,
+      "seed": 18,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1140,
+      "decode_time_s": 200.889,
+      "preproc_time_s": 0.01,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "4dc7a16130654db90a3ed995055f3fd1",
+      "stderr_tail": "trimmed dec_bytes 2609511424 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1140,
+        "n_reads_pre_merge": 34200,
+        "n_reads_post_merge": 34200,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 275794176490.881,
+        "pcr_amp_weight_max": 641898647644.9468,
+        "pcr_amp_weight_cv": 0.10226521073212808,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 19,
+      "seed": 19,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1149,
+      "decode_time_s": 197.138,
+      "preproc_time_s": 0.033,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "59afe3edccd744b8d4d9f7d9e1c62cae",
+      "stderr_tail": null,
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1149,
+        "n_reads_pre_merge": 34470,
+        "n_reads_post_merge": 34470,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 255954173717.37985,
+        "pcr_amp_weight_max": 576370789296.0598,
+        "pcr_amp_weight_cv": 0.10549471679775085,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 20,
+      "seed": 20,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1177,
+      "decode_time_s": 194.055,
+      "preproc_time_s": 0.009,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "2c12c8b67733b2193efcb1cf5bd7fe13",
+      "stderr_tail": "trimmed dec_bytes 536875607 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1177,
+        "n_reads_pre_merge": 35310,
+        "n_reads_post_merge": 35310,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 276010483941.1074,
+        "pcr_amp_weight_max": 592897304617.5057,
+        "pcr_amp_weight_cv": 0.10655703977182118,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 21,
+      "seed": 21,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1158,
+      "decode_time_s": 197.654,
+      "preproc_time_s": 0.009,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "1c74a67c5e74434774af326d54470f75",
+      "stderr_tail": "trimmed dec_bytes 1739029504 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1158,
+        "n_reads_pre_merge": 34740,
+        "n_reads_post_merge": 34740,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 273099310801.9689,
+        "pcr_amp_weight_max": 561649432157.6869,
+        "pcr_amp_weight_cv": 0.1054155211511871,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 22,
+      "seed": 22,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1106,
+      "decode_time_s": 201.96,
+      "preproc_time_s": 0.01,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "89db241751cd5a9932d2be963c4fae7a",
+      "stderr_tail": "trimmed dec_bytes 49192056 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1106,
+        "n_reads_pre_merge": 33180,
+        "n_reads_post_merge": 33180,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 273330197779.61493,
+        "pcr_amp_weight_max": 579645992661.6954,
+        "pcr_amp_weight_cv": 0.10535765469426144,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 23,
+      "seed": 23,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1170,
+      "decode_time_s": 197.505,
+      "preproc_time_s": 0.016,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "5d0cc0a9b57f9edbad7a06c22b2cd73b",
+      "stderr_tail": "trimmed dec_bytes 2518071934 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1170,
+        "n_reads_pre_merge": 35100,
+        "n_reads_post_merge": 35100,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 272593786398.4578,
+        "pcr_amp_weight_max": 580353398897.8448,
+        "pcr_amp_weight_cv": 0.10529931641320561,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 24,
+      "seed": 24,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1142,
+      "decode_time_s": 199.682,
+      "preproc_time_s": 0.015,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "fef776c2c6072fb79191e896a93e6800",
+      "stderr_tail": "trimmed dec_bytes 1841206194 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1142,
+        "n_reads_pre_merge": 34260,
+        "n_reads_post_merge": 34260,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 281745458276.72534,
+        "pcr_amp_weight_max": 605820837610.1635,
+        "pcr_amp_weight_cv": 0.10538090435086808,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 25,
+      "seed": 25,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1126,
+      "decode_time_s": 202.661,
+      "preproc_time_s": 0.013,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "d6fbdb0ec768e92be8dcacea042845f6",
+      "stderr_tail": "trimmed dec_bytes 2904466882 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1126,
+        "n_reads_pre_merge": 33780,
+        "n_reads_post_merge": 33780,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 272526563698.33154,
+        "pcr_amp_weight_max": 569727395099.7974,
+        "pcr_amp_weight_cv": 0.10354087666074147,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 26,
+      "seed": 26,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1147,
+      "decode_time_s": 200.458,
+      "preproc_time_s": 0.009,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "bf40a865b7be6727f4bafac575b4821a",
+      "stderr_tail": "trimmed dec_bytes 3221239350 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1147,
+        "n_reads_pre_merge": 34410,
+        "n_reads_post_merge": 34410,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 274440411490.01224,
+        "pcr_amp_weight_max": 557129136003.5585,
+        "pcr_amp_weight_cv": 0.10380486935803702,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 27,
+      "seed": 27,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1173,
+      "decode_time_s": 198.354,
+      "preproc_time_s": 0.014,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "0b3e23006e08b7c03807080e0465563a",
+      "stderr_tail": "trimmed dec_bytes 4190239233 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1173,
+        "n_reads_pre_merge": 35190,
+        "n_reads_post_merge": 35190,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 267944761864.72208,
+        "pcr_amp_weight_max": 565836010376.6239,
+        "pcr_amp_weight_cv": 0.10492259850875116,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 28,
+      "seed": 28,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1133,
+      "decode_time_s": 198.866,
+      "preproc_time_s": 0.011,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "e2f30d7b97c137ff0b961bfa9a8e6222",
+      "stderr_tail": "trimmed dec_bytes 15779 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1133,
+        "n_reads_pre_merge": 33990,
+        "n_reads_post_merge": 33990,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 266273528116.28494,
+        "pcr_amp_weight_max": 584599756039.7924,
+        "pcr_amp_weight_cv": 0.10502819515086763,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 29,
+      "seed": 29,
+      "success": false,
+      "failure_reason": "byte_compare_mismatch",
+      "density_eb_per_g": 241.579,
+      "n_seqs": 4590,
+      "n_surviving": 1192,
+      "decode_time_s": 193.358,
+      "preproc_time_s": 0.009,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": "a3c8d123773e8d0e35376fa1231b993b",
+      "stderr_tail": "trimmed dec_bytes 805310281 -> 15360",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 4590,
+        "n_surviving_after_poisson": 1192,
+        "n_reads_pre_merge": 35760,
+        "n_reads_post_merge": 35760,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 278715028265.5899,
+        "pcr_amp_weight_max": 582410937190.9722,
+        "pcr_amp_weight_cv": 0.10441013129512196,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    }
+  ]
+}

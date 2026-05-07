@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "codec": "mgcplus",
+  "channel": "lofi",
+  "r": 0.02,
+  "depth": 30.0,
+  "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+  "input_size": 15360,
+  "n_trials": 30,
+  "started_at": "2026-05-04T20:32:15.641063+00:00",
+  "finished_at": "2026-05-04T20:55:16.706019+00:00",
+  "provenance": {
+    "schema_version": 1,
+    "codec_git_sha": "unknown",
+    "docker_image_id": "57faf98b9d0e",
+    "hmm_rs_version": "unknown",
+    "idsim_version": "0.2.0",
+    "channel_coverage_sigma": 0.3,
+    "hostname": "cc6b30f0bb0f",
+    "python_version": "3.11.15",
+    "rustc_version": "1.83.0",
+    "channel_version": "v2",
+    "channel_extras": {
+      "sigma": 0.5,
+      "pcr": {
+        "preset": "q5",
+        "cycles_stage1": 15,
+        "cycles_stage2": 25,
+        "eff_mean": 0.95,
+        "eff_std": 0.0051,
+        "poly_sub_rate": 5e-07
+      },
+      "seq_pos_err": {
+        "e_min": 0.0001,
+        "e_max": 0.01,
+        "power": 2.0
+      },
+      "paired_end": {
+        "read_len": 150,
+        "overlap_min": 20
+      }
+    },
+    "parity_rate": 0.9847,
+    "parity_rate_actual": 0.983245849609375,
+    "mgcplus_outer_redundancy": 64438
+  },
+  "results": [],
+  "fatal_error": "ValueError: Need l_out >= ceil(log2(N_strands)); got l_out=16, N_strands=129974\nTraceback (most recent call last):\n  File \"/opt/entrypoint.py\", line 392, in main\n    seqs, oligo_len = _encode_once(data_bytes, outer_redundancy)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/entrypoint.py\", line 123, in _encode_once\n    mgcp.dna.codec.encode(\n  File \"/usr/local/lib/python3.11/site-packages/mgcp/dna/codec/MGCPcodec_Encode.py\", line 348, in encode\n    raise ValueError(f\"Need l_out >= ceil(log2(N_strands)); got l_out={l_out}, N_strands={N_strands}\")\nValueError: Need l_out >= ceil(log2(N_strands)); got l_out=16, N_strands=129974\n"
+}

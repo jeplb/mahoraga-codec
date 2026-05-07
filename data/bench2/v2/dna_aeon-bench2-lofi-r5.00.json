@@ -1,0 +1,1460 @@
+{
+  "schema_version": 1,
+  "codec": "dna_aeon",
+  "channel": "lofi",
+  "r": 5.0,
+  "depth": 30.0,
+  "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+  "input_size": 15360,
+  "n_trials": 30,
+  "started_at": "2026-05-05T02:04:27.785027+00:00",
+  "finished_at": "2026-05-05T04:04:09.114911+00:00",
+  "provenance": {
+    "schema_version": 1,
+    "codec_git_sha": "unknown",
+    "docker_image_id": "6fa584561151",
+    "hmm_rs_version": "unknown",
+    "idsim_version": "0.2.0",
+    "channel_coverage_sigma": 0.3,
+    "hostname": "60e44db5e82c",
+    "python_version": "3.11.15",
+    "rustc_version": "1.83.0",
+    "channel_version": "v2",
+    "channel_extras": {
+      "sigma": 0.5,
+      "pcr": {
+        "preset": "q5",
+        "cycles_stage1": 15,
+        "cycles_stage2": 25,
+        "eff_mean": 0.95,
+        "eff_std": 0.0051,
+        "poly_sub_rate": 5e-07
+      },
+      "seq_pos_err": {
+        "e_min": 0.0001,
+        "e_max": 0.01,
+        "power": 2.0
+      },
+      "paired_end": {
+        "read_len": 150,
+        "overlap_min": 20
+      }
+    },
+    "dna_aeon_preprocessing": "cdhit_dereplicate (id=0.85)",
+    "dna_aeon_package_redundancy": 0.08837614279494992,
+    "parity_rate": 0.0812,
+    "dna_aeon_k": 1100
+  },
+  "results": [
+    {
+      "trial": 0,
+      "seed": 0,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1157,
+      "decode_time_s": 243.883,
+      "preproc_time_s": 1.777,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_0/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_0/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1058\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1157,
+        "n_reads_pre_merge": 34710,
+        "n_reads_post_merge": 34710,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 301720088107.18915,
+        "pcr_amp_weight_max": 610941552313.856,
+        "pcr_amp_weight_cv": 0.10192278632983821,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 1,
+      "seed": 1,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1147,
+      "decode_time_s": 204.813,
+      "preproc_time_s": 1.411,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_1/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_1/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1035\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1147,
+        "n_reads_pre_merge": 34410,
+        "n_reads_post_merge": 34410,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 292249832900.07324,
+        "pcr_amp_weight_max": 544741159468.1478,
+        "pcr_amp_weight_cv": 0.10114879989703944,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 2,
+      "seed": 2,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1154,
+      "decode_time_s": 228.053,
+      "preproc_time_s": 1.412,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_2/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_2/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1044\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1154,
+        "n_reads_pre_merge": 34620,
+        "n_reads_post_merge": 34620,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 290758592178.9813,
+        "pcr_amp_weight_max": 577709953476.7574,
+        "pcr_amp_weight_cv": 0.10436297050815804,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 3,
+      "seed": 3,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1164,
+      "decode_time_s": 234.309,
+      "preproc_time_s": 1.465,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_3/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_3/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1048\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1164,
+        "n_reads_pre_merge": 34920,
+        "n_reads_post_merge": 34920,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 289530165706.55066,
+        "pcr_amp_weight_max": 564403306028.4038,
+        "pcr_amp_weight_cv": 0.10450946474300604,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 4,
+      "seed": 4,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1153,
+      "decode_time_s": 242.286,
+      "preproc_time_s": 1.582,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_4/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_4/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1015\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1153,
+        "n_reads_pre_merge": 34590,
+        "n_reads_post_merge": 34590,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 290788888919.54517,
+        "pcr_amp_weight_max": 564608950892.7338,
+        "pcr_amp_weight_cv": 0.10472861572048828,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 5,
+      "seed": 5,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1157,
+      "decode_time_s": 218.455,
+      "preproc_time_s": 1.569,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_5/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_5/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1045\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1157,
+        "n_reads_pre_merge": 34710,
+        "n_reads_post_merge": 34710,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 284968455703.2148,
+        "pcr_amp_weight_max": 562654909763.7391,
+        "pcr_amp_weight_cv": 0.10442634139873999,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 6,
+      "seed": 6,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1161,
+      "decode_time_s": 242.647,
+      "preproc_time_s": 1.59,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_6/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_6/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1033\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1161,
+        "n_reads_pre_merge": 34830,
+        "n_reads_post_merge": 34830,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 275070965126.5045,
+        "pcr_amp_weight_max": 561728307237.3624,
+        "pcr_amp_weight_cv": 0.10300526063127621,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 7,
+      "seed": 7,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1157,
+      "decode_time_s": 247.546,
+      "preproc_time_s": 1.648,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_7/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_7/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1029\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1157,
+        "n_reads_pre_merge": 34710,
+        "n_reads_post_merge": 34710,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 285651506244.19147,
+        "pcr_amp_weight_max": 594201448984.6936,
+        "pcr_amp_weight_cv": 0.10099255684768521,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 8,
+      "seed": 8,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1154,
+      "decode_time_s": 217.276,
+      "preproc_time_s": 1.582,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_8/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_8/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1031\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1154,
+        "n_reads_pre_merge": 34620,
+        "n_reads_post_merge": 34620,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 286884115692.99115,
+        "pcr_amp_weight_max": 564435694228.5396,
+        "pcr_amp_weight_cv": 0.10823037856619101,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 9,
+      "seed": 9,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1160,
+      "decode_time_s": 318.806,
+      "preproc_time_s": 1.617,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "  self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_9/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_9/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1022\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1160,
+        "n_reads_pre_merge": 34800,
+        "n_reads_post_merge": 34800,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 285405558075.95233,
+        "pcr_amp_weight_max": 534744556106.8504,
+        "pcr_amp_weight_cv": 0.10505078336647572,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 10,
+      "seed": 10,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1156,
+      "decode_time_s": 263.277,
+      "preproc_time_s": 1.58,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_10/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_10/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1023\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1156,
+        "n_reads_pre_merge": 34680,
+        "n_reads_post_merge": 34680,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 295143829321.66547,
+        "pcr_amp_weight_max": 565452646744.3624,
+        "pcr_amp_weight_cv": 0.10328602814095784,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 11,
+      "seed": 11,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1154,
+      "decode_time_s": 254.349,
+      "preproc_time_s": 1.591,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_11/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_11/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1029\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1154,
+        "n_reads_pre_merge": 34620,
+        "n_reads_post_merge": 34620,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 285047507423.8744,
+        "pcr_amp_weight_max": 564822649338.8569,
+        "pcr_amp_weight_cv": 0.10433148369438867,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 12,
+      "seed": 12,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1157,
+      "decode_time_s": 222.427,
+      "preproc_time_s": 1.576,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_12/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_12/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1053\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1157,
+        "n_reads_pre_merge": 34710,
+        "n_reads_post_merge": 34710,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 290958111248.8431,
+        "pcr_amp_weight_max": 569322316605.3895,
+        "pcr_amp_weight_cv": 0.10462636508417542,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 13,
+      "seed": 13,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1163,
+      "decode_time_s": 278.392,
+      "preproc_time_s": 1.616,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_13/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_13/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1027\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1163,
+        "n_reads_pre_merge": 34890,
+        "n_reads_post_merge": 34890,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 272431544562.41147,
+        "pcr_amp_weight_max": 557232075856.0513,
+        "pcr_amp_weight_cv": 0.10128194586867091,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 14,
+      "seed": 14,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1162,
+      "decode_time_s": 274.46,
+      "preproc_time_s": 1.606,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_14/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_14/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1039\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1162,
+        "n_reads_pre_merge": 34860,
+        "n_reads_post_merge": 34860,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 288051171347.9987,
+        "pcr_amp_weight_max": 599216853569.6838,
+        "pcr_amp_weight_cv": 0.10759572308074063,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 15,
+      "seed": 15,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1150,
+      "decode_time_s": 246.321,
+      "preproc_time_s": 1.533,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_15/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_15/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1021\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1150,
+        "n_reads_pre_merge": 34500,
+        "n_reads_post_merge": 34500,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 277476885117.1711,
+        "pcr_amp_weight_max": 551587063508.8243,
+        "pcr_amp_weight_cv": 0.11279512837776359,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 16,
+      "seed": 16,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1153,
+      "decode_time_s": 210.234,
+      "preproc_time_s": 1.53,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_16/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_16/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1051\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1153,
+        "n_reads_pre_merge": 34590,
+        "n_reads_post_merge": 34590,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 291379175133.4892,
+        "pcr_amp_weight_max": 551926410816.0402,
+        "pcr_amp_weight_cv": 0.1050852771607797,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 17,
+      "seed": 17,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1162,
+      "decode_time_s": 207.387,
+      "preproc_time_s": 1.568,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_17/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_17/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1054\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1162,
+        "n_reads_pre_merge": 34860,
+        "n_reads_post_merge": 34860,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 294793628846.5993,
+        "pcr_amp_weight_max": 565776828990.8142,
+        "pcr_amp_weight_cv": 0.0998663928772462,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 18,
+      "seed": 18,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1157,
+      "decode_time_s": 219.144,
+      "preproc_time_s": 1.54,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_18/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_18/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1040\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1157,
+        "n_reads_pre_merge": 34710,
+        "n_reads_post_merge": 34710,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 281797177235.9104,
+        "pcr_amp_weight_max": 539362385684.37494,
+        "pcr_amp_weight_cv": 0.10066312496375913,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 19,
+      "seed": 19,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1160,
+      "decode_time_s": 222.246,
+      "preproc_time_s": 1.58,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_19/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_19/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1032\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1160,
+        "n_reads_pre_merge": 34800,
+        "n_reads_post_merge": 34800,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 275033752348.1035,
+        "pcr_amp_weight_max": 553078428016.1526,
+        "pcr_amp_weight_cv": 0.10649598640779735,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 20,
+      "seed": 20,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1156,
+      "decode_time_s": 241.326,
+      "preproc_time_s": 1.525,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_20/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_20/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1024\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1156,
+        "n_reads_pre_merge": 34680,
+        "n_reads_post_merge": 34680,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 276010483941.1074,
+        "pcr_amp_weight_max": 583659269994.9341,
+        "pcr_amp_weight_cv": 0.10482425329862811,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 21,
+      "seed": 21,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1158,
+      "decode_time_s": 261.289,
+      "preproc_time_s": 1.531,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_21/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_21/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1024\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1158,
+        "n_reads_pre_merge": 34740,
+        "n_reads_post_merge": 34740,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 285270154034.4138,
+        "pcr_amp_weight_max": 561649432157.6869,
+        "pcr_amp_weight_cv": 0.10620414523057102,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 22,
+      "seed": 22,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1147,
+      "decode_time_s": 230.136,
+      "preproc_time_s": 1.514,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_22/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_22/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1034\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1147,
+        "n_reads_pre_merge": 34410,
+        "n_reads_post_merge": 34410,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 295123694604.41797,
+        "pcr_amp_weight_max": 542890502971.068,
+        "pcr_amp_weight_cv": 0.10570380248694052,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 23,
+      "seed": 23,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1153,
+      "decode_time_s": 224.262,
+      "preproc_time_s": 1.54,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_23/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_23/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1037\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1153,
+        "n_reads_pre_merge": 34590,
+        "n_reads_post_merge": 34590,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 290268058752.24695,
+        "pcr_amp_weight_max": 529236910908.9356,
+        "pcr_amp_weight_cv": 0.10612420917086453,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 24,
+      "seed": 24,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1142,
+      "decode_time_s": 205.394,
+      "preproc_time_s": 1.549,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_24/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_24/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1035\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1142,
+        "n_reads_pre_merge": 34260,
+        "n_reads_post_merge": 34260,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 281745458276.72534,
+        "pcr_amp_weight_max": 554087373548.0226,
+        "pcr_amp_weight_cv": 0.10447861723273022,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 25,
+      "seed": 25,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1145,
+      "decode_time_s": 206.174,
+      "preproc_time_s": 1.522,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_25/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_25/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1026\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1145,
+        "n_reads_pre_merge": 34350,
+        "n_reads_post_merge": 34350,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 274873474578.01428,
+        "pcr_amp_weight_max": 569727395099.7974,
+        "pcr_amp_weight_cv": 0.10446610556731899,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 26,
+      "seed": 26,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1150,
+      "decode_time_s": 234.057,
+      "preproc_time_s": 1.541,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_26/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_26/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1033\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1150,
+        "n_reads_pre_merge": 34500,
+        "n_reads_post_merge": 34500,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 284438004584.3368,
+        "pcr_amp_weight_max": 546729901989.22766,
+        "pcr_amp_weight_cv": 0.10557850795306806,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 27,
+      "seed": 27,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1169,
+      "decode_time_s": 214.256,
+      "preproc_time_s": 1.543,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_27/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_27/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1056\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1169,
+        "n_reads_pre_merge": 35070,
+        "n_reads_post_merge": 35070,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 281355544775.3451,
+        "pcr_amp_weight_max": 565836010376.6239,
+        "pcr_amp_weight_cv": 0.10346375959945349,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 28,
+      "seed": 28,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1156,
+      "decode_time_s": 245.233,
+      "preproc_time_s": 1.553,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_28/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_28/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1060 is out of bounds for axis 0 with size 1041\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1156,
+        "n_reads_pre_merge": 34680,
+        "n_reads_post_merge": 34680,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 282147225470.0306,
+        "pcr_amp_weight_max": 539017714979.5333,
+        "pcr_amp_weight_cv": 0.10522061500691834,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    },
+    {
+      "trial": 29,
+      "seed": 29,
+      "success": false,
+      "failure_reason": "decode_subprocess_failed",
+      "density_eb_per_g": 21.031,
+      "n_seqs": 1197,
+      "n_surviving": 1163,
+      "decode_time_s": 272.296,
+      "preproc_time_s": 1.543,
+      "inner_pass_rate": null,
+      "input_md5": "58eb4272da73dbeae125ce3232ec86ca",
+      "output_md5": null,
+      "stderr_tail": "self.__decode(section, self.config[section])\n  File \"/tmp/dna_aeon_work/trial_29/NOREC4DNA/ConfigWorker.py\", line 97, in __decode\n    raise ex\n  File \"/tmp/dna_aeon_work/trial_29/NOREC4DNA/ConfigWorker.py\", line 88, in __decode\n    demo.decode(f_file, error_correction=error_correction, null_is_terminator=is_null_terminated,\n  File \"/opt/dna_aeon/NOREC4DNA/demo_raptor_decode.py\", line 59, in decode\n    x.GEPP.A = np.copy(tmp_A[p])\nIndexError: index 1034 is out of bounds for axis 0 with size 1022\n",
+      "error": null,
+      "channel_stats": {
+        "n_templates": 1197,
+        "n_surviving_after_poisson": 1163,
+        "n_reads_pre_merge": 34890,
+        "n_reads_post_merge": 34890,
+        "merge_success_rate": 1.0,
+        "pcr_amp_weight_min": 292658229908.04315,
+        "pcr_amp_weight_max": 573004187995.0168,
+        "pcr_amp_weight_cv": 0.10468106618864166,
+        "pcr_cumulative_sub_rate": 1.9999999999999998e-05,
+        "seq_pos_err_mean_sub_rate": 0.0034000000000000002,
+        "version": "v2",
+        "sigma": 0.5,
+        "pcr_config": {
+          "preset": "q5",
+          "cycles_stage1": 15,
+          "cycles_stage2": 25,
+          "eff_mean": 0.95,
+          "eff_std": 0.0051,
+          "poly_sub_rate": 5e-07
+        },
+        "seq_pos_err_config": {
+          "e_min": 0.0001,
+          "e_max": 0.01,
+          "power": 2.0
+        },
+        "paired_end_config": {
+          "read_len": 150,
+          "overlap_min": 20
+        }
+      }
+    }
+  ]
+}

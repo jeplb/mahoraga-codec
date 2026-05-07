@@ -20,10 +20,14 @@ bench3/          plot scripts for the DT4DDS pipeline (pareto, gimpel_style)
 bench4/          plot script for longevity projection
 data/            benchmark JSON, organised to match the paper
   bench1/          codec comparison (supp. table s1)
+    v2/              same cells re-run on the v2 channel (see "Channel versions")
   bench2/          matched-parity comparison (supp. table s2, fig 1 c/d)
+    v2/
   bench3/          DT4DDS pipeline replication (supp. table s3, fig 3)
   bench4/          longevity (supp. table s4, fig 4)
+    v2/
   bench5/          strand length sweep (supp. fig)
+    v2/
 alphabet_ceiling/  capacity-ceiling analysis (script + CSV)
 ```
 
@@ -76,6 +80,34 @@ cd codec && pytest -q
 | `mahoraga_py.ldpc`        | LDPC BP decoder, GF(2) row reduction, systematic encode |
 | `mahoraga_py.osd`         | ordered-statistics decoder (OSD-0/1/2/3) with CRC gating |
 | `mahoraga_py.pipeline`    | top-level: InnerCode, encode_to_dna, decode_from_reads, turbo RS |
+
+## Channel versions (v1, v2)
+
+The benchmarks ship two idsim channel models. Each `data/benchN/` directory carries v1 results at the top level; v2 results live in a `v2/` subdirectory alongside.
+
+**v1** (`coverage_sigma=0.3`). Three-stage idsim: synthesis IDS errors → lognormal-weighted Poisson coverage → per-read sequencing IDS errors with uniform per-base rates. This is what produced the original paper numbers; JSONs at the top level of each `data/benchN/`.
+
+**v2** (`coverage_sigma=0.5` + Q5 PCR + iSeq position-dependent errors + iSeq-100 NGmerge). Adds three optional stages to match Gimpel 2026 / DT4DDS behavior more faithfully. When all three additive stages are off, v2 reduces to v1 modulo the `coverage_sigma` default.
+
+| v2 stage | model |
+|---|---|
+| coverage variance | lognormal `sigma=0.5` (DT4DDS-style; v1 uses 0.3) |
+| PCR amplification | Q5 high-fidelity, 15+25 cycles. Per-cycle efficiency drawn `Normal(0.95, 0.0051)` and clamped to `[0,1]`; the per-template amplification weight `(1+eff)^cycles` multiplies the lognormal coverage weight, then is renormalized so mean coverage still equals `physical_redundancy`. Cumulative polymerase substitution rate `40 cycles × 5e-7 / cycle = 2e-5` per base. |
+| sequencer errors | position-dependent substitution: `e(pos) = e_min + (e_max − e_min) × (pos/L)^power` with `e_min = 1e-4`, `e_max = 1e-2`, `power = 2`. Replaces the uniform `seq_sub` rate; del / ins stay uniform. Mean sub rate over `[0, L]` is `e_min + (e_max − e_min) / (power + 1) ≈ 3.4e-3`. Per-base Phred quality `Q = -10·log10(e(pos))` is returned alongside each read. |
+| paired-end / merge | iSeq-100 paired-end with `read_len = 150`, NGmerge with `overlap_min = 20`. Reads from a strand of length `L` are dropped when `L > 2·read_len − overlap_min = 280 nt` — this matches the iSeq-100 merge limit. For `L ≤ 280` the merge always succeeds. |
+
+Densities at v2 land roughly 6–9% below v1 at matched cells; the gap comes mostly from the higher dropout variance pushing outer-RS utilization closer to capacity.
+
+The v2 dataset:
+
+| path | contents |
+|---|---|
+| `data/bench1/v2/` | codec comparison cells (5 codecs × 10 `r` × 2 channels), v2 channel |
+| `data/bench2/v2/` | matched-outer-parity comparison cells, v2 channel |
+| `data/bench4/v2/` | longevity sweep cells (3 codecs × 4 `r_initial`). The four `r_initial_{1,2,5,10}.0.json` files (mahoraga) carry per-trial decoder-stage telemetry — HMM rejection, posterior confidence, OSD order histogram, CRC pass rate, RS utilization, Berlekamp-Massey error count. The `mgcplus-…` and `dna_aeon-…` files are pass-rate only (those codecs are not instrumented). |
+| `data/bench5/v2/bench5_v2_telemetry.json` | strand-length sweep at v2 with per-trial telemetry for every cell |
+
+The v2 telemetry surfaces which decoder stage absorbs the v2-extra errors. In bench5 (varying `L`) the inner-code OSD-fail rate is the only field that moves — it scales 3.2× from `L=126` to `L=300`. In bench4 (fixed encoding, sweeping `channel_r` downward) the per-strand decode is invariant and only RS utilization moves with dropout.
 
 ## Reproducing the paper
 
