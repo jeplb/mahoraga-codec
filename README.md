@@ -96,7 +96,7 @@ The benchmarks ship two idsim channel models. Each `data/benchN/` directory carr
 | sequencer errors | position-dependent substitution: `e(pos) = e_min + (e_max − e_min) × (pos/L)^power` with `e_min = 1e-4`, `e_max = 1e-2`, `power = 2`. Replaces the uniform `seq_sub` rate; del / ins stay uniform. Mean sub rate over `[0, L]` is `e_min + (e_max − e_min) / (power + 1) ≈ 3.4e-3`. Per-base Phred quality `Q = -10·log10(e(pos))` is returned alongside each read. |
 | paired-end / merge | iSeq-100 paired-end with `read_len = 150`, NGmerge with `overlap_min = 20`. Reads from a strand of length `L` are dropped when `L > 2·read_len − overlap_min = 280 nt` — this matches the iSeq-100 merge limit. For `L ≤ 280` the merge always succeeds. |
 
-Densities at v2 land roughly 6–9% below v1 at matched cells; the gap comes mostly from the higher dropout variance pushing outer-RS utilization closer to capacity.
+Densities at v2 land roughly 6–9% below v1 at matched cells. The gap comes mostly from the higher dropout variance pushing outer-RS utilization closer to capacity.
 
 The v2 dataset:
 
@@ -107,7 +107,7 @@ The v2 dataset:
 | `data/bench4/v2/` | longevity sweep cells (3 codecs × 4 `r_initial`). The four `r_initial_{1,2,5,10}.0.json` files (mahoraga) carry per-trial decoder-stage telemetry — HMM rejection, posterior confidence, OSD order histogram, CRC pass rate, RS utilization, Berlekamp-Massey error count. The `mgcplus-…` and `dna_aeon-…` files are pass-rate only (those codecs are not instrumented). |
 | `data/bench5/v2/bench5_v2_telemetry.json` | strand-length sweep at v2 with per-trial telemetry for every cell |
 
-The v2 telemetry surfaces which decoder stage absorbs the v2-extra errors. In bench5 (varying `L`) the inner-code OSD-fail rate is the only field that moves — it scales 3.2× from `L=126` to `L=300`. In bench4 (fixed encoding, sweeping `channel_r` downward) the per-strand decode is invariant and only RS utilization moves with dropout.
+The v2 telemetry surfaces which decoder stage absorbs the v2-extra errors. In bench5 (varying `L`) the inner-code OSD-fail rate is the only field that moves, specifically it scales 3.2× from `L=126` to `L=300`. In bench4 (fixed encoding, sweeping `channel_r` downward) the per-strand decode is invariant and only RS utilization moves with dropout.
 
 ## Reproducing the paper
 
