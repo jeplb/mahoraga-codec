@@ -43,21 +43,6 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -e '.[test]'
 ```
 
-## Smoke test
-
-```python
-from mahoraga_py import pipeline, viterbi
-
-data = b"hello " * 50
-inner = pipeline.InnerCode.new("hifi")
-seqs, _ = pipeline.encode_to_dna(data, inner, physical_redundancy=1.28)
-
-# treat the encoded seqs as perfect reads
-hmm = viterbi.HmmParams.default_ids()
-rec, stats = pipeline.decode_from_reads(seqs, seqs, inner, hmm, len(data))
-assert rec == data
-```
-
 ## Tests
 
 ```
